@@ -1,7 +1,7 @@
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 
-// Asset Imports for Contact Persons
+// Asset Imports
 import preetiRawatImg from "../assets/team/CAS Heads/preeti-rawat.jpg";
 import soniKumariImg from "../assets/team/CAS Heads/soni kumari.jpg";
 import anushkaNepalpuriImg from "../assets/team/CAS Heads/anushka-nepalpuri.jpg";
@@ -67,20 +67,13 @@ export default function Contact() {
                 {section.members.map((m, j) => (
                   <div key={j} className="flex items-center gap-6 group">
                     <div className="w-20 h-20 rounded-full border-2 border-brownDark/20 overflow-hidden shadow-sm group-hover:scale-105 transition-transform bg-white/20">
-                      <img 
-                        src={m.image} 
-                        alt={m.name} 
-                        style={imgStyle} 
-                      />
+                      <img src={m.image} alt={m.name} style={imgStyle} />
                     </div>
                     <div>
                       <h3 className="text-[12px] font-bold text-brownDark leading-tight uppercase tracking-wider">
                         {m.name}
                       </h3>
-                      <a 
-                        href={`tel:${m.phone}`} 
-                        className="text-[11px] text-brownMid font-bold mt-2 block hover:text-brownDark transition-colors"
-                      >
+                      <a href={`tel:${m.phone}`} className="text-[11px] text-brownMid font-bold mt-2 block hover:text-brownDark transition-colors">
                         PHONE: {m.phone}
                       </a>
                     </div>

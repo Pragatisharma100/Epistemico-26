@@ -1,22 +1,22 @@
-import Navbar from "../components/Navbar"; //
-import Hero from "../components/Hero"; //
-import About from "../components/About"; //
-import Footer from "../components/Footer"; //
-import Theme from "../components/Theme"; //
-import Sponsors from "../components/Sponsors"; //
+// src/pages/Home.jsx
+import Navbar from "../components/Navbar";
+import Hero from "../components/Hero";
+import About from "../components/About";
+import Theme from "../components/Theme";
+import Sponsors from "../components/Sponsors";
+import Footer from "../components/Footer";
 
-
-export default function Home() {
+const Home = () => {
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen"> {/* Removed specific bg-center classes to use global CSS */}
       <Navbar />
-      <main className="max-w-6xl mx-auto px-4 pb-10">
-        <Hero/>
-        <About />
-        <Theme />
-        <Sponsors />
-        <Footer />
-      </main>
+      <Hero />
+      <About />
+      <Theme />
+      <Sponsors />
+      <Footer />
     </div>
   );
-}
+};
+
+export default Home;

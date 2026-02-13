@@ -159,6 +159,13 @@ const executiveTeams = [
 ];
 
 export default function Team() {
+  const imgStyle = {
+    width: '100%',
+    height: '100%',
+    objectFit: 'cover',
+    objectPosition: 'center 15%'
+  };
+
   return (
     <div className="min-h-screen">
       <Navbar />
@@ -167,25 +174,19 @@ export default function Team() {
           <h1 className="text-4xl font-bold text-brownDark font-samarkan drop-shadow-sm uppercase">EPISTEMICO TEAM'26</h1>
         </div>
 
-        {/* Leadership Section */}
+        {/* Leadership Section - Names now match the simple font of others */}
         <div className="flex justify-center gap-6 mb-12">
           {leadership.map((leader, i) => (
             <div key={i} className="glass-card w-48 p-4 rounded-2xl flex flex-col items-center hover:scale-105 transition-transform duration-300">
-              <div className="w-24 h-28 rounded-full border-2 border-brownDark/30 mb-3 overflow-hidden shadow-md bg-gray-50">
-                <img 
-                  src={leader.image} 
-                  alt={leader.name} 
-                  className="w-full h-full object-cover" 
-                  style={{ objectPosition: 'center 20%' }}
-                />
+              <div className="w-24 h-28 rounded-full border-2 border-brownDark/30 mb-3 overflow-hidden shadow-md bg-white/40">
+                <img src={leader.image} alt={leader.name} style={imgStyle} />
               </div>
-              <h2 className="text-sm font-bold text-brownDark font-samarkan text-center leading-tight">{leader.name}</h2>
+              <h2 className="text-sm font-bold text-brownDark text-center leading-tight">{leader.name}</h2>
               <p className="text-[9px] text-brownMid font-extrabold uppercase tracking-widest mt-1">{leader.role}</p>
             </div>
           ))}
         </div>
 
-        {/* CAS Committee Section */}
         <div className="text-center mb-6">
           <h2 className="text-2xl font-bold text-brownDark font-samarkan border-b-2 border-brownDark/20 inline-block px-10">CAS COMMITTEE</h2>
         </div>
@@ -196,13 +197,8 @@ export default function Team() {
               <div className="flex flex-wrap justify-center gap-4">
                 {committee.members.map((m, j) => (
                   <div key={j} className="flex flex-col items-center group w-20">
-                    <div className="w-14 h-14 rounded-full border-2 border-brownDark/20 mb-2 group-hover:scale-110 transition-transform overflow-hidden shadow-sm bg-gray-50">
-                      <img 
-                        src={m.image} 
-                        alt={m.name} 
-                        className="w-full h-full object-cover" 
-                        style={{ objectPosition: 'center 20%' }}
-                      />
+                    <div className="w-14 h-14 rounded-full border-2 border-brownDark/20 mb-2 group-hover:scale-110 transition-transform overflow-hidden shadow-sm bg-white/40">
+                      <img src={m.image} alt={m.name} style={imgStyle} />
                     </div>
                     <p className="text-[8px] font-bold text-brownDark text-center leading-tight">{m.name}</p>
                     <p className="text-[7px] text-brownMid font-bold uppercase">({m.role})</p>
@@ -213,7 +209,6 @@ export default function Team() {
           ))}
         </div>
 
-        {/* Executive Team Section */}
         <div className="text-center mb-6">
           <h2 className="text-2xl font-bold text-brownDark font-samarkan border-b-2 border-brownDark/20 inline-block px-10">EXECUTIVE TEAM</h2>
         </div>
@@ -224,13 +219,8 @@ export default function Team() {
               <div className="grid grid-cols-4 gap-3">
                 {team.members.map((m, j) => (
                   <div key={j} className="flex flex-col items-center text-center group">
-                    <div className="w-14 h-14 rounded-full border-2 border-brownDark/10 mb-2 bg-white/20 overflow-hidden group-hover:scale-110 transition-transform shadow-sm bg-gray-50">
-                      <img 
-                        src={m.image || "https://via.placeholder.com/80"} 
-                        alt={m.name} 
-                        className="w-full h-full object-cover" 
-                        style={{ objectPosition: 'center 20%' }}
-                      />
+                    <div className="w-14 h-14 rounded-full border-2 border-brownDark/10 mb-2 bg-white/20 overflow-hidden group-hover:scale-110 transition-transform shadow-sm bg-white/40">
+                      <img src={m.image || "https://via.placeholder.com/80"} alt={m.name} style={imgStyle} />
                     </div>
                     <p className="text-[8px] font-bold text-brownDark leading-tight">{m.name}</p>
                     <p className="text-[7px] text-brownMid mt-1 font-bold uppercase">{m.role}</p>
