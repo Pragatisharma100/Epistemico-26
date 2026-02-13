@@ -1,7 +1,7 @@
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 
-// Asset Imports (CAS Committee & Executive Team)
+// Asset Imports
 import aayushiTakImg from "../assets/team/CAS Heads/aayushi-tak.jpg";
 import ananyaMewaraImg from "../assets/team/CAS Heads/ananya-mewara.jpg";
 import anushkaNepalpuriImg from "../assets/team/CAS Heads/anushka-nepalpuri.jpg";
@@ -169,15 +169,16 @@ export default function Team() {
   return (
     <div className="min-h-screen">
       <Navbar />
-      <main className="max-w-6xl mx-auto px-4 py-8">
-        <div className="text-center mb-8">
+      {/* pt-44 creates consistent spacing below navbar */}
+      <main className="max-w-6xl mx-auto px-4 pt-44 pb-12">
+        <div className="text-center mb-12">
           <h1 className="text-4xl font-bold text-brownDark font-samarkan drop-shadow-sm uppercase">EPISTEMICO TEAM'26</h1>
         </div>
 
-        {/* Leadership Section - Names now match the simple font of others */}
+        {/* Leadership Section */}
         <div className="flex justify-center gap-6 mb-12">
           {leadership.map((leader, i) => (
-            <div key={i} className="glass-card w-48 p-4 rounded-2xl flex flex-col items-center hover:scale-105 transition-transform duration-300">
+            <div key={i} className="glass-card w-48 p-4 rounded-2xl flex flex-col items-center hover:scale-105 transition-transform duration-300 border-2 border-brownMid/20">
               <div className="w-24 h-28 rounded-full border-2 border-brownDark/30 mb-3 overflow-hidden shadow-md bg-white/40">
                 <img src={leader.image} alt={leader.name} style={imgStyle} />
               </div>
@@ -192,7 +193,7 @@ export default function Team() {
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
           {casCommittees.map((committee, i) => (
-            <div key={i} className="glass-card p-4 rounded-xl hover:bg-white/50 transition-colors duration-300">
+            <div key={i} className="glass-card p-4 rounded-xl hover:bg-white/50 transition-colors duration-300 border-2 border-brownMid/20">
               <h3 className="text-[11px] text-center font-bold text-brownMid tracking-[0.2em] mb-4 uppercase border-b border-brownDark/5 pb-1">{committee.title}</h3>
               <div className="flex flex-wrap justify-center gap-4">
                 {committee.members.map((m, j) => (
@@ -214,7 +215,7 @@ export default function Team() {
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {executiveTeams.map((team, i) => (
-            <div key={i} className="glass-card p-4 rounded-xl hover:bg-white/50 transition-colors duration-300">
+            <div key={i} className="glass-card p-4 rounded-xl hover:bg-white/50 transition-colors duration-300 border-2 border-brownMid/20">
               <h3 className="text-[11px] font-bold text-brownMid tracking-[0.2em] mb-4 text-center uppercase border-b border-brownDark/10 pb-1">{team.title}</h3>
               <div className="grid grid-cols-4 gap-3">
                 {team.members.map((m, j) => (
@@ -230,8 +231,8 @@ export default function Team() {
             </div>
           ))}
         </div>
-        <Footer />
       </main>
+      <Footer />
     </div>
   );
 }

@@ -1,7 +1,7 @@
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 
-// Import your local images from src/assets/
+// Import your local images
 import techImg from "../assets/tech.jpeg"; 
 import culturalImg from "../assets/cultural.jpg";
 import innovationImg from "../assets/innovation.jpeg";
@@ -34,17 +34,15 @@ export default function Events() {
   return (
     <div className="min-h-screen">
       <Navbar />
-      <main className="max-w-7xl mx-auto px-2 py-10">
-        <h1 className="text-4xl font-extrabold text-center text-brownDark font-samarkan mb-8 drop-shadow-md">
+      {/* pt-44 creates the space between navbar and content */}
+      <main className="max-w-7xl mx-auto px-4 pt-44 pb-12">
+        <h1 className="text-4xl font-extrabold text-center text-brownDark font-samarkan mb-12 drop-shadow-md">
           Fest Events
         </h1>
         
-        {/* Changed grid-cols-4 and gap-4 to keep blocks smaller and in one line */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 items-stretch">
           {eventsData.map((event, index) => (
-            <div key={index} className="glass-card group rounded-xl overflow-hidden hover:scale-[1.02] transition-all duration-500 hover:shadow-xl flex flex-col h-full">
-              
-              {/* Reduced image height to h-40 to keep blocks compact */}
+            <div key={index} className="glass-card group rounded-xl overflow-hidden hover:scale-[1.02] transition-all duration-500 hover:shadow-xl flex flex-col h-full border-2 border-brownMid/20">
               <div className="relative h-40 overflow-hidden">
                 <img 
                   src={event.image} 
@@ -56,15 +54,11 @@ export default function Events() {
                   {event.title}
                 </h3>
               </div>
-
-              {/* Compact text content */}
               <div className="p-3 flex-grow">
                 <p className="text-[11px] text-brownMid leading-snug italic">
                   "{event.description}"
                 </p>
               </div>
-
-              {/* Smaller Action Button */}
               <div className="p-3 border-t border-white/20">
                 <button className="w-full py-1.5 rounded-full bg-[#a9572f] text-white font-bold text-[10px] uppercase tracking-wider hover:bg-[#8b4524] transition-colors">
                   View Details

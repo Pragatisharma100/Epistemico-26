@@ -52,14 +52,15 @@ export default function Contact() {
   return (
     <div className="min-h-screen">
       <Navbar />
-      <main className="max-w-6xl mx-auto px-4 py-8">
-        <div className="text-center mb-8">
+      {/* pt-44 ensures content starts below the fixed navbar */}
+      <main className="max-w-6xl mx-auto px-4 pt-44 pb-12">
+        <div className="text-center mb-12">
           <h1 className="text-4xl font-bold text-brownDark font-samarkan drop-shadow-sm uppercase">CONTACT US</h1>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {contactSections.map((section, i) => (
-            <div key={i} className="glass-card p-6 rounded-xl hover:bg-white/50 transition-colors duration-300">
+            <div key={i} className="glass-card p-6 rounded-xl hover:bg-white/50 transition-colors duration-300 border-2 border-brownMid/20">
               <h2 className="text-[14px] text-center font-bold text-brownMid tracking-[0.2em] mb-6 uppercase border-b border-brownDark/10 pb-2 font-samarkan">
                 {section.committee}
               </h2>
@@ -83,8 +84,8 @@ export default function Contact() {
             </div>
           ))}
         </div>
-        <Footer />
       </main>
+      <Footer />
     </div>
   );
 }
