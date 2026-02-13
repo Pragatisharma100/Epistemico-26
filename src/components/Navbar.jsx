@@ -1,78 +1,74 @@
+import { Link, useLocation } from "react-router-dom";
 import { motion } from "framer-motion";
-import { Link } from "react-router-dom";
-import logo from "../assets/logo.png";
 
 export default function Navbar() {
+  const location = useLocation();
+
+  const navLinks = [
+    { name: "Home", path: "/" },
+    { name: "Events", path: "/events" },
+    { name: "Gallery", path: "/gallery" }, // Added Gallery option
+    { name: "Team", path: "/team" },
+    { name: "Contact", path: "/contact" },
+  ];
+
   return (
-    <motion.header
-      className="w-full bg-white/50 backdrop-blur-md border-b-2 border-[#7d1d2a] sticky top-0 z-50"
-      initial={{ opacity: 0, y: -30 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.8, ease: "easeOut" }}
-    >
-      <div className="max-w-6xl mx-auto px-4 py-2 flex items-center justify-between gap-3">
+    <nav className="fixed top-6 left-1/2 -translate-x-1/2 z-50 w-[90%] max-w-4xl">
+      <motion.div 
+        initial={{ y: -20, opacity: 0 }}
+        animate={{ y: 0, opacity: 1 }}
+        className="glass-card flex items-center justify-between px-8 py-4 rounded-full border-2 border-brownMid/30 shadow-2xl backdrop-blur-xl bg-white/40"
+      >
+        {/* Brand Section */}
+        <div className="flex flex-col items-start">
+          <h1 className="font-samarkan text-3xl text-brownDark leading-none tracking-wider">
+            epistemico
+          </h1>
+          <span className="font-samarkan text-[10px] text-brownMid tracking-[0.2em] mt-1 uppercase">
+            Vasudhaiva Kutumbakam
+          </span>
+        </div>
 
-        {/* LOGO SECTION */}
-        <motion.div
-          initial={{ opacity: 0, x: -20 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.6, delay: 0.2 }}
+        {/* Navigation Links */}
+        <div className="flex items-center gap-8">
+          {navLinks.map((link) => {
+            const isActive = location.pathname === link.path;
+            return (
+              <Link
+                key={link.path}
+                to={link.path}
+                className="relative group py-1"
+              >
+                <span className={`text-sm font-bold uppercase tracking-widest transition-colors duration-300 ${
+                  isActive ? "text-brownDark" : "text-brownMid group-hover:text-brownDark"
+                }`}>
+                  {link.name}
+                </span>
+                
+                {/* Catchy Animated Underline */}
+                <motion.div 
+                  className="absolute bottom-0 left-0 h-[2px] bg-brownDark"
+                  initial={{ width: 0 }}
+                  animate={{ width: isActive ? "100%" : 0 }}
+                  transition={{ duration: 0.3 }}
+                />
+                {!isActive && (
+                  <span className="absolute bottom-0 left-0 w-0 h-[2px] bg-brownMid transition-all duration-300 group-hover:w-full" />
+                )}
+              </Link>
+            );
+          })}
+        </div>
+
+        {/* Updated Action Button Name */}
+        <motion.button
           whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.95 }}
+          className="bg-brownDark text-white px-6 py-2 rounded-full text-xs font-bold uppercase tracking-tighter shadow-lg hover:bg-brownMid transition-colors"
         >
-          <Link to="/" className="flex items-center gap-3">
-
-            {/* Logo Image */}
-            <motion.img
-              src={logo}
-              alt="Epistemico Logo"
-              className="w-20 h-20 object-contain"
-              initial={{ scale: 0.5, opacity: 0 }}
-              animate={{ scale: 1, opacity: 1 }}
-              transition={{ duration: 0.5, delay: 0.4 }}
-              whileHover={{ rotate: 5 }}
-            />
-
-            {/* Logo Text */}
-            <div className="flex flex-col">
-              <motion.div
-                className="text-2xl font-bold text-brownDark font-samarkan"
-                initial={{ opacity: 0, y: -10 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.6 }}
-              >
-                epistemico
-              </motion.div>
-
-              <motion.div
-                className="hidden md:block text-[10px] text-brownMid italic font-samarkan"
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ duration: 0.5, delay: 0.8 }}
-              >
-                Vasudhaiva Kutumbakam
-              </motion.div>
-            </div>
-
-          </Link>
-        </motion.div>
-
-        {/* NAV LINKS */}
-        <nav className="flex items-center gap-4 md:gap-6 text-xs md:text-sm font-semibold text-brownDark">
-          <Link to="/" className="hover:text-[#ba6a3a] transition-colors">Home</Link>
-          <Link to="/events" className="hover:text-[#ba6a3a] transition-colors">Events</Link>
-          <Link to="#" className="hover:text-[#ba6a3a] transition-colors">Gallery</Link>
-          <Link to="/team" className="hover:text-[#ba6a3a] transition-colors">Team</Link>
-          <Link to="/contact" className="hover:text-[#ba6a3a] transition-colors">Contact</Link>
-
-          <Link
-            to="/events"
-            className="hidden sm:block px-5 py-1.5 rounded-full bg-[#ba6a3a] text-white text-xs shadow-md hover:scale-105 transition-transform"
-          >
-            Book Passes
-          </Link>
-        </nav>
-
-      </div>
-    </motion.header>
+          Book Passes
+        </motion.button>
+      </motion.div>
+    </nav>
   );
 }
