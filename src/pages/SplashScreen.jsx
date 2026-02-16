@@ -57,7 +57,7 @@ const SplashScreen = ({ onEnter }) => {
 
         {/* SANSKRIT (FIXED) */}
         <motion.p
-          className="text-4xl font-extrabold text-[#4a2c1a] -mt-9 translate-x-4 md:translate-x-0
+          className="text-4xl font-extrabold text-[#4a2c1a] -mt-11 translate-x-4 md:translate-x-0
 "
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
@@ -88,22 +88,25 @@ const SplashScreen = ({ onEnter }) => {
           17<sup>th</sup> & 18<sup>th</sup> March 2026
         </motion.h2>
 
-        {/* CLICK HERE */}
-        <motion.p
-          onClick={onEnter}
-          className="mt-1 text-lg font-bold text-[#4a2c1a] cursor-pointer translate-x-4 md:translate-x-0
-"
-          style={{
-            fontFamily: "Georgia, serif",
-            fontStyle: "italic",
-          }}
-          initial={{ opacity: 0, y: 15 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 2 }}
-          whileHover={{ scale: 1.05 }}
-        >
-          Click Here
-        </motion.p>
+        {/* EXPLORE BUTTON */}
+<motion.button
+  onClick={onEnter}
+  className="mt-1 px-6 py-2 border-2 border-[#4a2c1a] text-[#4a2c1a] font-bold rounded-full translate-x-4 md:translate-x-0"
+  style={{
+    fontFamily: "Georgia, serif",
+    fontStyle: "italic",
+    backgroundColor: "rgba(255,255,255,0.25)",
+    backdropFilter: "blur(3px)"
+  }}
+  initial={{ opacity: 0, y: 15 }}
+  animate={{ opacity: 1, y: 0 }}
+  transition={{ delay: 2 }}
+  whileHover={{ scale: 1.07, backgroundColor: "rgba(255,255,255,0.4)" }}
+  whileTap={{ scale: 0.95 }}
+>
+  Explore
+</motion.button>
+
       </div>
     </div>
   );
