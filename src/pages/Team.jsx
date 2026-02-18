@@ -1,7 +1,7 @@
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 
-// Asset Imports
+// Asset Imports - CAS Heads
 import aayushiTakImg from "../assets/team/CAS Heads/aayushi-tak.jpg";
 import ananyaMewaraImg from "../assets/team/CAS Heads/ananya-mewara.jpg";
 import anushkaNepalpuriImg from "../assets/team/CAS Heads/anushka-nepalpuri.jpg";
@@ -11,11 +11,19 @@ import preetiRawatImg from "../assets/team/CAS Heads/preeti-rawat.jpg";
 import sakshiFauzdarImg from "../assets/team/CAS Heads/sakshi-fauzdar.jpg";
 import sonakshiReniyaImg from "../assets/team/CAS Heads/sonakshi-reniya.jpg";
 import soniKumariImg from "../assets/team/CAS Heads/soni kumari.jpg";
+import dishaChhipaImg from "../assets/team/CAS Heads/disha-chhipa.jpg";
+import gargiSharmaImg from "../assets/team/CAS Heads/gargi-sharma.jpg";
+import himanshiRathoreImg from "../assets/team/CAS Heads/himanshi-rathore.jpg";
+
+// Asset Imports - CAS Subheads
 import budhilataImg from "../assets/team/CAS Subheads/budhilata.jpg";
 import devanshiParasharImg from "../assets/team/CAS Subheads/devanshi-parashar.jpg";
 import kirtiSarohiyaImg from "../assets/team/CAS Subheads/kirti-sarohiya.jpg";
 import kritikaDadhichImg from "../assets/team/CAS Subheads/kritika-dadhich.jpg";
 import kumkumRathoreImg from "../assets/team/CAS Subheads/kumkum-rathore.jpg";
+import harshitaGuptaImg from "../assets/team/CAS Subheads/harshita-gupta.jpg";
+
+// Asset Imports - Technical Team
 import tanishkaSahuImg from "../assets/team/Technical Team/tanishka-sahu.jpg";
 import tishaLalchandaniImg from "../assets/team/Technical Team/tisha-lalchandani.jpg";
 import shwetaJacobImg from "../assets/team/Technical Team/shweta-jacob.jpg";
@@ -24,37 +32,52 @@ import yashikaMenghaniImg from "../assets/team/Technical Team/yashika-menghani.j
 import bhawanaSharmaImg from "../assets/team/Technical Team/bhawana-sharma.jpg";
 import anushkaSharmaImg from "../assets/team/Technical Team/anushka-sharma.jpg";
 import niteshNayakImg from "../assets/team/Technical Team/nitesh-nayak.jpg";
+import pragatiSharmaImg from "../assets/team/Technical Team/pragati-sharma.jpg";
+import arshpreetKaurImg from "../assets/team/Technical Team/arshpreet-kaur.jpg";
+
+// Asset Imports - PR Team
 import shrutiSethiImg from "../assets/team/PR Team/shruti-sethi.jpg";
 import priyanshiJainImg from "../assets/team/PR Team/priyanshi-jain.jpg";
 import richaShrivastavaImg from "../assets/team/PR Team/richa-shrivastava.png";
+
+// Asset Imports - Creative Team
 import khushiKhatriImg from "../assets/team/Creative Team/khushi-khatri.jpg";
 import nandiniRathoreImg from "../assets/team/Creative Team/nandini-kunwar-rathore.jpg";
 import palakMarothiyaImg from "../assets/team/Creative Team/palak-marothiya.jpg";
 import ridhimaImg from "../assets/team/Creative Team/ridhima-chakraborty.jpg";
 import bhavytaImg from "../assets/team/Creative Team/bhavyta-ramawat.jpg";
+
+// Asset Imports - Cultural Team
 import dhwaniImg from "../assets/team/Cultural Team/dhwani-jain.jpg";
 import ambikaImg from "../assets/team/Cultural Team/ambika-mathur.jpg";
 import aayushiRajImg from "../assets/team/Cultural Team/aayushi-rajguru.jpg";
 import titikshaImg from "../assets/team/Cultural Team/titiksha.jpg";
 import renuImg from "../assets/team/Cultural Team/renu-rathore.jpg";
+
+// Asset Imports - Groundwork Team
 import ektaImg from "../assets/team/Groundwork Team/ekta-sharma.jpg";
 import lavishkaImg from "../assets/team/Groundwork Team/lavishka-rathore.jpg";
 import divyanshiImg from "../assets/team/Groundwork Team/divyanshi-sen.jpg";
 import rishitaImg from "../assets/team/Groundwork Team/rishita-gurjar.jpg";
+import garimaRawatImg from "../assets/team/Groundwork Team/garima-rawat.jpg";
+
+// Asset Imports - Social Media Team
 import vratikaImg from "../assets/team/Social Media Team/vratika-kumawat.jpg";
 import traptiImg from "../assets/team/Social Media Team/trapti-jain.jpg";
 import kritiChauhanImg from "../assets/team/Social Media Team/kriti-chauhan.jpg";
+import anushkaChoudharyImg from "../assets/team/Social Media Team/anushka-choudhary.jpg";
+import swatiAnandImg from "../assets/team/Social Media Team/swati-anand.jpg";
 
 const leadership = [
-  { name: "GARGI SHARMA", role: "PRESIDENT", image: "https://via.placeholder.com/150" },
-  { name: "HIMANSHI RATHORE", role: "VICE PRESIDENT", image: "https://via.placeholder.com/150" }
+  { name: "GARGI SHARMA", role: "PRESIDENT", image: gargiSharmaImg },
+  { name: "HIMANSHI RATHORE", role: "VICE PRESIDENT", image: himanshiRathoreImg }
 ];
 
 const casCommittees = [
   {
     title: "TECHNICAL COMMITTEE",
     members: [
-      { name: "DISHA CHHIPA", role: "HEAD", image: "https://via.placeholder.com/80" },
+      { name: "DISHA CHHIPA", role: "HEAD", image: dishaChhipaImg },
       { name: "ANUSHKA NEPALPURI", role: "HEAD", image: anushkaNepalpuriImg },
       { name: "KRITIKA DADHICH", role: "SUB-HEAD", image: kritikaDadhichImg }
     ]
@@ -72,10 +95,9 @@ const casCommittees = [
   {
     title: "INNOVATION COMMITTEE",
     members: [
-      { name: "ASTHA SHARMA", role: "HEAD", image: "https://via.placeholder.com/80" },
       { name: "PREETI RAWAT", role: "HEAD", image: preetiRawatImg },
       { name: "SONI KUMARI", role: "HEAD", image: soniKumariImg },
-      { name: "HARSHITA GUPTA", role: "SUB-HEAD", image: "https://via.placeholder.com/80" }
+      { name: "HARSHITA GUPTA", role: "SUB-HEAD", image: harshitaGuptaImg }
     ]
   },
   {
@@ -96,23 +118,21 @@ const executiveTeams = [
     members: [
       { name: "TANISHKA SAHU", role: "4TH YEAR", image: tanishkaSahuImg },
       { name: "TISHA LALCHANDANI", role: "4TH YEAR", image: tishaLalchandaniImg },
-      { name: "PRAGATI SHARMA", role: "4TH YEAR", image: "https://via.placeholder.com/80" },
+      { name: "PRAGATI SHARMA", role: "4TH YEAR", image: pragatiSharmaImg },
       { name: "SHWETA JACOB", role: "4TH YEAR", image: shwetaJacobImg },
       { name: "PRIYANSHI AGARWAL", role: "3RD YEAR", image: priyanshiAgarwalImg },
       { name: "YASHIKA MENGHANI", role: "3RD YEAR", image: yashikaMenghaniImg },
       { name: "BHAWANA SHARMA", role: "4TH YEAR", image: bhawanaSharmaImg },
       { name: "ANUSHKA SHARMA", role: "4TH YEAR", image: anushkaSharmaImg },
       { name: "NITESH NAYAK", role: "4TH YEAR", image: niteshNayakImg },
-      { name: "ARSHPREET KAUR", role: "4TH YEAR", image: "https://via.placeholder.com/80" }
+      { name: "ARSHPREET KAUR", role: "4TH YEAR", image: arshpreetKaurImg }
     ]
   },
   {
     title: "PUBLIC RELATIONS (PR)",
     members: [
       { name: "SHRUTI SETHI", role: "4TH YEAR", image: shrutiSethiImg },
-      { name: "RONAK MEEL", role: "4TH YEAR", image: "https://via.placeholder.com/80" },
       { name: "PRIYANSHI JAIN", role: "4TH YEAR", image: priyanshiJainImg },
-      { name: "ANJALI GUPTA", role: "4TH YEAR", image: "https://via.placeholder.com/80" },
       { name: "RICHA SHRIVASTAVA", role: "3RD YEAR", image: richaShrivastavaImg }
     ]
   },
@@ -142,17 +162,17 @@ const executiveTeams = [
       { name: "EKTA SHARMA", role: "4TH YEAR", image: ektaImg },
       { name: "LAVISHKA RATHORE", role: "4TH YEAR", image: lavishkaImg },
       { name: "DIVYANSHI SEN", role: "3RD YEAR", image: divyanshiImg },
-      { name: "GARIMA RAWAT", role: "3RD YEAR", image: "https://via.placeholder.com/80" },
+      { name: "GARIMA RAWAT", role: "3RD YEAR", image: garimaRawatImg },
       { name: "RISHITA GURJAR", role: "3RD YEAR", image: rishitaImg }
     ]
   },
   {
     title: "SOCIAL MEDIA / OUTREACH",
     members: [
-      { name: "SWATI ANAND", role: "4TH YEAR", image: "https://via.placeholder.com/80" },
+      { name: "SWATI ANAND", role: "4TH YEAR", image: swatiAnandImg },
       { name: "VRATIKA KUMAWAT", role: "3RD YEAR", image: vratikaImg },
       { name: "TRAPTI JAIN", role: "3RD YEAR", image: traptiImg },
-      { name: "ANUSHKA CHOUDHARY", role: "3RD YEAR", image: "https://via.placeholder.com/80" },
+      { name: "ANUSHKA CHOUDHARY", role: "3RD YEAR", image: anushkaChoudharyImg },
       { name: "KRITI CHAUHAN", role: "3RD YEAR", image: kritiChauhanImg }
     ]
   }
@@ -169,7 +189,6 @@ export default function Team() {
   return (
     <div className="min-h-screen">
       <Navbar />
-      {/* pt-44 creates consistent spacing below navbar */}
       <main className="max-w-6xl mx-auto px-4 pt-44 pb-12">
         <div className="text-center mb-12">
           <h1 className="text-4xl font-bold text-brownDark font-samarkan drop-shadow-sm uppercase">EPISTEMICO TEAM'26</h1>
@@ -180,7 +199,7 @@ export default function Team() {
           {leadership.map((leader, i) => (
             <div key={i} className="glass-card w-48 p-4 rounded-2xl flex flex-col items-center hover:scale-105 transition-transform duration-300 border-2 border-brownMid/20">
               <div className="w-24 h-28 rounded-full border-2 border-brownDark/30 mb-3 overflow-hidden shadow-md bg-white/40">
-                <img src={leader.image} alt={leader.name} style={imgStyle} />
+                <img src={leader.image} alt={leader.name} style={imgStyle} onError={(e) => { e.target.src = "https://via.placeholder.com/150"; }} />
               </div>
               <h2 className="text-sm font-bold text-brownDark text-center leading-tight">{leader.name}</h2>
               <p className="text-[9px] text-brownMid font-extrabold uppercase tracking-widest mt-1">{leader.role}</p>
@@ -199,7 +218,7 @@ export default function Team() {
                 {committee.members.map((m, j) => (
                   <div key={j} className="flex flex-col items-center group w-20">
                     <div className="w-14 h-14 rounded-full border-2 border-brownDark/20 mb-2 group-hover:scale-110 transition-transform overflow-hidden shadow-sm bg-white/40">
-                      <img src={m.image} alt={m.name} style={imgStyle} />
+                      <img src={m.image} alt={m.name} style={imgStyle} onError={(e) => { e.target.src = "https://via.placeholder.com/80"; }} />
                     </div>
                     <p className="text-[8px] font-bold text-brownDark text-center leading-tight">{m.name}</p>
                     <p className="text-[7px] text-brownMid font-bold uppercase">({m.role})</p>
@@ -221,7 +240,7 @@ export default function Team() {
                 {team.members.map((m, j) => (
                   <div key={j} className="flex flex-col items-center text-center group">
                     <div className="w-14 h-14 rounded-full border-2 border-brownDark/10 mb-2 bg-white/20 overflow-hidden group-hover:scale-110 transition-transform shadow-sm bg-white/40">
-                      <img src={m.image || "https://via.placeholder.com/80"} alt={m.name} style={imgStyle} />
+                      <img src={m.image} alt={m.name} style={imgStyle} onError={(e) => { e.target.src = "https://via.placeholder.com/80"; }} />
                     </div>
                     <p className="text-[8px] font-bold text-brownDark leading-tight">{m.name}</p>
                     <p className="text-[7px] text-brownMid mt-1 font-bold uppercase">{m.role}</p>
