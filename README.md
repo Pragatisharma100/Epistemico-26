@@ -33,34 +33,4 @@ The site features:\
 
 ## 🛠️ Setup and Installation
 
-Follow these steps to run the project locally.
-
-1.  **Clone the repository:**
-    ```bash
-    git clone <your-repository-url>
-    cd Epistemico26
-    ```
-
-2.  **Create and activate a virtual environment:**
-    ```bash
-    # For macOS/Linux
-    python3 -m venv venv
-    source venv/bin/activate
-
-    # For Windows
-    python -m venv venv
-    venv\Scripts\activate
-    ```
-
-3.  **Install the required dependencies:**
-    ```bash
-    pip install -r requirements.txt
-    ```
-
-4.  **Run the Flask application:**
-    ```bash
-    python app.py
-    ```
-
-5.  Open your browser and navigate to `http://127.0.0.1:5000` to see the website live.
-
+https://epistmico-new.vercel.app/
