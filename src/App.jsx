@@ -88,7 +88,7 @@ function AnimatedRoutes() {
               exit="exit"
               transition={{ duration: 0.4, ease: "easeOut" }}
             >
-              <Innovation />
+              <Innovation/>
             </motion.div>
           }
         />
@@ -136,7 +136,7 @@ function AnimatedRoutes() {
               exit="exit"
               transition={{ duration: 0.4, ease: "easeOut" }}
             >
-              <Technical />
+              <Technical/>
             </motion.div>
           }
         />
@@ -184,7 +184,7 @@ function AnimatedRoutes() {
               exit="exit"
               transition={{ duration: 0.4, ease: "easeOut" }}
             >
-              <Literary />
+              <Literary/>
             </motion.div>
           }
         />
@@ -216,7 +216,7 @@ function AnimatedRoutes() {
               exit="exit"
               transition={{ duration: 0.4, ease: "easeOut" }}
             >
-              <Cultural />
+              <Cultural/>
             </motion.div>
           }
         />
