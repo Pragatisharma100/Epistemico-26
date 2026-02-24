@@ -1,3 +1,4 @@
+import { useNavigate } from "react-router-dom";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 
@@ -31,6 +32,20 @@ const eventsData = [
 ];
 
 export default function Events() {
+  const navigate = useNavigate();
+
+  const handleEventClick = (eventTitle) => {
+    if (eventTitle === "Innovation Committee") {
+      navigate("/innovation");
+    } else if (eventTitle === "Technical Committee") {
+      navigate("/technical");
+    } else if (eventTitle === "Literary Committee") {
+      navigate("/literary");
+    } else if (eventTitle === "Cultural Committee") {
+      navigate("/cultural");
+    }
+  };
+
   return (
     <div className="min-h-screen">
       <Navbar />
@@ -60,7 +75,10 @@ export default function Events() {
                 </p>
               </div>
               <div className="p-3 border-t border-white/20">
-                <button className="w-full py-1.5 rounded-full bg-[#a9572f] text-white font-bold text-[10px] uppercase tracking-wider hover:bg-[#8b4524] transition-colors">
+                <button 
+                  onClick={() => handleEventClick(event.title)}
+                  className="w-full py-1.5 rounded-full bg-[#a9572f] text-white font-bold text-[10px] uppercase tracking-wider hover:bg-[#8b4524] transition-colors cursor-pointer"
+                >
                   View Details
                 </button>
               </div>

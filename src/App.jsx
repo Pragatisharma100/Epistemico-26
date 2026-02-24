@@ -4,6 +4,14 @@ import { useState } from "react";
 
 import Home from "./pages/Home";
 import Events from "./pages/Events";
+import Innovation from "./pages/Innovation";
+import InnovationDetail from "./pages/InnovationDetail";
+import Technical from "./pages/Technical";
+import TechnicalDetail from "./pages/TechnicalDetail";
+import Literary from "./pages/Literary";
+import LiteraryDetail from "./pages/LiteraryDetail";
+import Cultural from "./pages/Cultural";
+import CulturalDetail from "./pages/CulturalDetail";
 import Team from "./pages/Team";
 import Contact from "./pages/Contact";
 import SplashScreen from "./pages/SplashScreen";
@@ -69,6 +77,38 @@ function AnimatedRoutes() {
           }
         />
 
+        {/* INNOVATION */}
+        <Route
+          path="/innovation"
+          element={
+            <motion.div
+              variants={pageVariants}
+              initial="initial"
+              animate="animate"
+              exit="exit"
+              transition={{ duration: 0.4, ease: "easeOut" }}
+            >
+              <Innovation />
+            </motion.div>
+          }
+        />
+
+        {/* INNOVATION - DETAIL */}
+        <Route
+          path="/innovation/:id"
+          element={
+            <motion.div
+              variants={pageVariants}
+              initial="initial"
+              animate="animate"
+              exit="exit"
+              transition={{ duration: 0.4, ease: "easeOut" }}
+            >
+              <InnovationDetail />
+            </motion.div>
+          }
+        />
+
         {/* TEAM */}
         <Route
           path="/team"
@@ -85,6 +125,38 @@ function AnimatedRoutes() {
           }
         />
 
+        {/* TECHNICAL */}
+        <Route
+          path="/technical"
+          element={
+            <motion.div
+              variants={pageVariants}
+              initial="initial"
+              animate="animate"
+              exit="exit"
+              transition={{ duration: 0.4, ease: "easeOut" }}
+            >
+              <Technical />
+            </motion.div>
+          }
+        />
+
+        {/* TECHNICAL - DETAIL */}
+        <Route
+          path="/technical/:id"
+          element={
+            <motion.div
+              variants={pageVariants}
+              initial="initial"
+              animate="animate"
+              exit="exit"
+              transition={{ duration: 0.4, ease: "easeOut" }}
+            >
+              <TechnicalDetail />
+            </motion.div>
+          }
+        />
+
         {/* CONTACT */}
         <Route
           path="/contact"
@@ -97,6 +169,70 @@ function AnimatedRoutes() {
               transition={{ duration: 0.4, ease: "easeOut" }}
             >
               <Contact />
+            </motion.div>
+          }
+        />
+
+        {/* LITERARY */}
+        <Route
+          path="/literary"
+          element={
+            <motion.div
+              variants={pageVariants}
+              initial="initial"
+              animate="animate"
+              exit="exit"
+              transition={{ duration: 0.4, ease: "easeOut" }}
+            >
+              <Literary />
+            </motion.div>
+          }
+        />
+
+        {/* LITERARY - DETAIL */}
+        <Route
+          path="/literary/:id"
+          element={
+            <motion.div
+              variants={pageVariants}
+              initial="initial"
+              animate="animate"
+              exit="exit"
+              transition={{ duration: 0.4, ease: "easeOut" }}
+            >
+              <LiteraryDetail />
+            </motion.div>
+          }
+        />
+
+        {/* CULTURAL */}
+        <Route
+          path="/cultural"
+          element={
+            <motion.div
+              variants={pageVariants}
+              initial="initial"
+              animate="animate"
+              exit="exit"
+              transition={{ duration: 0.4, ease: "easeOut" }}
+            >
+              <Cultural />
+            </motion.div>
+          }
+        />
+
+        {/* CULTURAL - DETAIL */}
+        <Route
+          path="/cultural/:id"
+          element={
+            <motion.div
+              variants={pageVariants}
+              initial="initial"
+              animate="animate"
+              exit="exit"
+              transition={{ duration: 0.4, ease: "easeOut" }}
+            >
+              <CulturalDetail />
             </motion.div>
           }
         />
