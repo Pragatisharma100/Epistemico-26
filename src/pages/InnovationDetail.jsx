@@ -177,7 +177,8 @@ export default function InnovationDetail() {
 
             <div className="mt-6">
               <button onClick={() => setShowRegistration(true)} className="inline-block px-6 py-2 bg-[#a9572f] text-white rounded-full font-semibold mr-3">Register Now</button>
-              <a href="/innovation/" className="inline-block px-6 py-2 bg-white text-[#a9572f] rounded-full font-semibold border border-[#a9572f]">Back to Innovation Events</a>
+              <button onClick={() => navigate(-1)} className="inline-block px-6 py-2 bg-white text-[#a9572f] rounded-full font-semibold border border-[#a9572f]">Go Back</button>
+              {/* <a href="/innovation/" className="inline-block px-6 py-2 bg-white text-[#a9572f] rounded-full font-semibold border border-[#a9572f]">Back to Innovation Events</a> */}
             </div>
           </div>
         </div>
