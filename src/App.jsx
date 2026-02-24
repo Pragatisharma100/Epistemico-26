@@ -79,7 +79,7 @@ function AnimatedRoutes() {
 
         {/* INNOVATION */}
         <Route
-          path="/innovation"
+          path="/innovation/"
           element={
             <motion.div
               variants={pageVariants}
@@ -88,7 +88,7 @@ function AnimatedRoutes() {
               exit="exit"
               transition={{ duration: 0.4, ease: "easeOut" }}
             >
-              <Innovation/>
+              <Innovation />
             </motion.div>
           }
         />
@@ -127,7 +127,7 @@ function AnimatedRoutes() {
 
         {/* TECHNICAL */}
         <Route
-          path="/technical"
+          path="/technical/"
           element={
             <motion.div
               variants={pageVariants}
@@ -136,7 +136,7 @@ function AnimatedRoutes() {
               exit="exit"
               transition={{ duration: 0.4, ease: "easeOut" }}
             >
-              <Technical/>
+              <Technical />
             </motion.div>
           }
         />
@@ -175,7 +175,7 @@ function AnimatedRoutes() {
 
         {/* LITERARY */}
         <Route
-          path="/literary"
+          path="/literary/"
           element={
             <motion.div
               variants={pageVariants}
@@ -184,7 +184,7 @@ function AnimatedRoutes() {
               exit="exit"
               transition={{ duration: 0.4, ease: "easeOut" }}
             >
-              <Literary/>
+              <Literary />
             </motion.div>
           }
         />
@@ -216,7 +216,7 @@ function AnimatedRoutes() {
               exit="exit"
               transition={{ duration: 0.4, ease: "easeOut" }}
             >
-              <Cultural/>
+              <Cultural />
             </motion.div>
           }
         />
