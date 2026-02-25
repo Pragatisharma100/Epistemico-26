@@ -1,10 +1,17 @@
+import bailaConmigo from "../assets/bailaConmigo.jpg";
+import echo2 from "../assets/echo2.jpg";
+import soloDance from "../assets/solodance.png";
+import groupSinging from "../assets/group singing.jpg";
+import soloSinging from "../assets/solosinging.jpg";
+import metGala from "../assets/metgala.jpg";
+import hauteCouture from "../assets/hautecouture.jpg";
 const culturalEvents = [
   {
     id: 1,
     title: "GROUP DANCE - BAILA CONMIGO",
     shortTitle: "Baila Conmigo",
     category: "Group Dance",
-    image: "https://ibb.co/nMwSQWCk",
+    image: bailaConmigo,
     overview:
       "BAILA CONMIGO is a vibrant group dance competition where energy, synchronization, and creativity come alive on stage.",
     maxTeams: "15 Teams",
@@ -29,7 +36,7 @@ const culturalEvents = [
     title: "DUET DANCE - ECHO2",
     shortTitle: "Echo2",
     category: "Duet Dance",
-    image: "https://ibb.co/N2JRG6xY",
+    image: echo2,
     overview:
       "Echo2 celebrates teamwork, coordination, and chemistry between two dancers judged on synchronization and storytelling.",
     maxTeams: "10 Teams",
@@ -54,7 +61,7 @@ const culturalEvents = [
     title: "SOLO DANCE - FOOTLOOSE",
     shortTitle: "Footloose",
     category: "Solo Dance",
-    image: "https://freeimage.host/i/qfdZMxf",
+    image: soloDance,
     overview:
       "Footloose brings individual talent to the spotlight, allowing solo dancers to express personal style, rhythm, and passion.",
     totalParticipants: "15",
@@ -78,7 +85,7 @@ const culturalEvents = [
     title: "GROUP SINGING - SANGAM",
     shortTitle: "Sangam",
     category: "Group Singing",
-    image: "https://ibb.co/1Y61pS1f",
+    image: groupSinging,
     overview:
       "Sangam brings together group singers to perform songs evaluated on harmony, pitch, and expression.",
     maxTeams: "10 Teams",
@@ -103,7 +110,7 @@ const culturalEvents = [
     title: "SOLO SINGING - EUPHONY",
     shortTitle: "Euphony",
     category: "Solo Singing",
-    image: "https://ibb.co/ZRHgtxMX",
+    image: soloSinging,
     overview:
       "Euphony is a solo singing competition celebrating vocal talent, modulation, and audience connection.",
     totalParticipants: "10",
@@ -127,7 +134,7 @@ const culturalEvents = [
     title: "FASHION WALK - MET-GALA (THE GWECA EDITION)",
     shortTitle: "Met-Gala",
     category: "Fashion Walk",
-    image: "C:\Users\ACER\OneDrive\Desktop\Epistemico-26-1\src\assets\MET GALA-landscape.png",
+    image: metGala,
     overview:
       "MET-GALA celebrates style, confidence and creative presentation on the ramp, focusing on elegance and innovation.",
     maxTeams: "12 Teams",
@@ -154,7 +161,7 @@ const culturalEvents = [
     title: "STYLING EVENT - HAUTE COUTURE",
     shortTitle: "Haute Couture",
     category: "Styling",
-    image: "https://ibb.co/3mr4YdMw",
+    image: hauteCouture,
     overview:
       "HAUTE COUTURE is a styling event celebrating imagination, confidence, and visual storytelling where teams create looks inspired by assigned regions and twist cards.",
     maxTeams: "15 Teams",
