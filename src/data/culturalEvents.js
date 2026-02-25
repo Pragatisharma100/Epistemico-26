@@ -4,7 +4,7 @@ const culturalEvents = [
     title: "GROUP DANCE - BAILA CONMIGO",
     shortTitle: "Baila Conmigo",
     category: "Group Dance",
-    image: "https://images.unsplash.com/photo-1519160558534-5798c0d3b6b1?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3&s=aaee11bb22cc33dd44ee55ff66778899",
+    image: "https://ibb.co/nMwSQWCk",
     overview:
       "BAILA CONMIGO is a vibrant group dance competition where energy, synchronization, and creativity come alive on stage.",
     maxTeams: "15 Teams",
@@ -29,7 +29,7 @@ const culturalEvents = [
     title: "DUET DANCE - ECHO2",
     shortTitle: "Echo2",
     category: "Duet Dance",
-    image: "https://images.unsplash.com/photo-1519669556872-6b0c5c2f3b6b?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3&s=bb11cc22dd33ee44ff55aa66bb778899",
+    image: "https://ibb.co/N2JRG6xY",
     overview:
       "Echo2 celebrates teamwork, coordination, and chemistry between two dancers judged on synchronization and storytelling.",
     maxTeams: "10 Teams",
@@ -54,7 +54,7 @@ const culturalEvents = [
     title: "SOLO DANCE - FOOTLOOSE",
     shortTitle: "Footloose",
     category: "Solo Dance",
-    image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3&s=ccdd11ee22ff33445566778899aabbcc",
+    image: "https://ibb.co/LzzYZFyV",
     overview:
       "Footloose brings individual talent to the spotlight, allowing solo dancers to express personal style, rhythm, and passion.",
     totalParticipants: "15",
@@ -78,7 +78,7 @@ const culturalEvents = [
     title: "GROUP SINGING - SANGAM",
     shortTitle: "Sangam",
     category: "Group Singing",
-    image: "https://images.unsplash.com/photo-1507874457470-272b3c8d8ee2?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3&s=ddffaa88776655443322110099887766",
+    image: "https://ibb.co/1Y61pS1f",
     overview:
       "Sangam brings together group singers to perform songs evaluated on harmony, pitch, and expression.",
     maxTeams: "10 Teams",
@@ -103,7 +103,7 @@ const culturalEvents = [
     title: "SOLO SINGING - EUPHONY",
     shortTitle: "Euphony",
     category: "Solo Singing",
-    image: "https://images.unsplash.com/photo-1492684223066-81342ee5ff30?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3&s=eeff11223344556677889900aabbccdd",
+    image: "https://ibb.co/chLxxcsH",
     overview:
       "Euphony is a solo singing competition celebrating vocal talent, modulation, and audience connection.",
     totalParticipants: "10",
@@ -127,7 +127,7 @@ const culturalEvents = [
     title: "FASHION WALK - MET-GALA (THE GWECA EDITION)",
     shortTitle: "Met-Gala",
     category: "Fashion Walk",
-    image: "https://images.unsplash.com/photo-1518609878373-06d740f60d8b?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3&s=1122aabb3344cc55dd66ee77ff889900",
+    image: "https://ibb.co/hRpLXmts",
     overview:
       "MET-GALA celebrates style, confidence and creative presentation on the ramp, focusing on elegance and innovation.",
     maxTeams: "12 Teams",
@@ -154,7 +154,7 @@ const culturalEvents = [
     title: "STYLING EVENT - HAUTE COUTURE",
     shortTitle: "Haute Couture",
     category: "Styling",
-    image: "https://images.unsplash.com/photo-1531853128633-4f8f0ef0b3b9?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3&s=33445566778899aabbccddeeff001122",
+    image: "https://ibb.co/3mr4YdMw",
     overview:
       "HAUTE COUTURE is a styling event celebrating imagination, confidence, and visual storytelling where teams create looks inspired by assigned regions and twist cards.",
     maxTeams: "15 Teams",

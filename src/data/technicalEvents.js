@@ -5,7 +5,7 @@ const technicalEvents = [
     shortTitle: "Kōde Keishō",
     category: "Relay Coding",
     image:
-      "https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3&s=6b8f9a1c2d3e4f5a6b7c8d9e0f1a2b3c",
+      "https://ibb.co/k2ZyQSv7",
     overview:
       "Team-based relay coding competition testing technical skills, adaptability, strategic thinking, and readable code. Members work sequentially on a single problem with no communication during execution.",
     eventDetails: {
@@ -58,7 +58,7 @@ const technicalEvents = [
     shortTitle: "TechTrek",
     category: "Treasure Hunt",
     image:
-      "https://images.unsplash.com/photo-1504893524553-b8553c9a7f8b?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3&s=abcdef1234567890abcdef1234567890",
+      "https://ibb.co/Mk7c4P4N",
     overview:
       "Campus-wide technical treasure hunt combining logical reasoning, programming concepts, and digital puzzles across physical locations and web-based clues.",
     eventDetails: {
@@ -97,7 +97,7 @@ const technicalEvents = [
     shortTitle: "BattleDomeX",
     category: "eSports",
     image:
-      "https://images.unsplash.com/photo-1522323867637-5b3e12c88f6a?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3&s=11223344556677889900aabbccddeeff",
+      "https://ibb.co/TDK0KyPW",
     overview:
       "Competitive eSports event featuring BGMI and Free Fire with knockout rounds, live commentary and leaderboards creating a pro gaming atmosphere.",
     eventDetails: {
@@ -127,7 +127,7 @@ const technicalEvents = [
     shortTitle: "AI Cineverse",
     category: "Digital / AI",
     image:
-      "https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3&s=99887766554433221100aabbccddeeff",
+      "https://ibb.co/q3njmsNs",
     overview:
       "Individual or duo competition to produce an original AI-generated short film (visuals + narration). Focus on creativity, ethical AI use, and storytelling.",
     eventDetails: {
