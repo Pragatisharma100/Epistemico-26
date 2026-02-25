@@ -127,7 +127,7 @@ const technicalEvents = [
     shortTitle: "AI Cineverse",
     category: "Digital / AI",
     image:
-      "https://instasize.com/p/6684c7d47d6f73e9dff85ec44fa0470cd4f20dd6bad31e5c20a1393918d4e2b0",
+      "C:\Users\ACER\OneDrive\Desktop\Epistemico-26-1\src\assets\AI CINEVERSE.jpg",
     overview:
       "Individual or duo competition to produce an original AI-generated short film (visuals + narration). Focus on creativity, ethical AI use, and storytelling.",
     eventDetails: {
