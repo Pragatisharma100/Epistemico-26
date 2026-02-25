@@ -1,5 +1,6 @@
 import aiCineverseImg from "../assets/AI CINEVERSE.jpg";
 import kodeKeisho from "../assets/kodekeisho.jpg";
+import battleDome from "../assets/battledome.jpg";
 import techTrek from "../assets/techtrek.jpg";
 const technicalEvents = [
   {
@@ -97,8 +98,7 @@ const technicalEvents = [
     title: "BattleDomeX — Gaming Competition",
     shortTitle: "BattleDomeX",
     category: "eSports",
-    image:
-      "https://ibb.co/TDK0KyPW",
+    image: battleDome,
     overview:
       "Competitive eSports event featuring BGMI and Free Fire with knockout rounds, live commentary and leaderboards creating a pro gaming atmosphere.",
     eventDetails: {
