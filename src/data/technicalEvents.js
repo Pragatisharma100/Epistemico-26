@@ -1,12 +1,13 @@
 import aiCineverseImg from "../assets/AI CINEVERSE.jpg";
+import techTrek from "../assets/techtrek.jpg";
+import battleDomeX from "../assets/battledomex.jpg";
 const technicalEvents = [
   {
     id: 1,
     title: "Kōde Keishō — Coding Relay Challenge",
     shortTitle: "Kōde Keishō",
     category: "Relay Coding",
-    image:
-      "https://ibb.co/k2ZyQSv7",
+    image: kodeKeisho,
     overview:
       "Team-based relay coding competition testing technical skills, adaptability, strategic thinking, and readable code. Members work sequentially on a single problem with no communication during execution.",
     eventDetails: {
@@ -58,8 +59,7 @@ const technicalEvents = [
     title: "TechTrek — The Ultimate Technical Treasure Hunt",
     shortTitle: "TechTrek",
     category: "Treasure Hunt",
-    image:
-      "https://ibb.co/qFYmcKJT",
+    image: techTrek,
     overview:
       "Campus-wide technical treasure hunt combining logical reasoning, programming concepts, and digital puzzles across physical locations and web-based clues.",
     eventDetails: {
