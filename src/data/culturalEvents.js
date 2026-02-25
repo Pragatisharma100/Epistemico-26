@@ -54,7 +54,7 @@ const culturalEvents = [
     title: "SOLO DANCE - FOOTLOOSE",
     shortTitle: "Footloose",
     category: "Solo Dance",
-    image: "https://ibb.co/LzzYZFyV",
+    image: "https://freeimage.host/i/qfdZMxf",
     overview:
       "Footloose brings individual talent to the spotlight, allowing solo dancers to express personal style, rhythm, and passion.",
     totalParticipants: "15",
