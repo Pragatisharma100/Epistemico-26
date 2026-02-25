@@ -1,6 +1,6 @@
 import aiCineverseImg from "../assets/AI CINEVERSE.jpg";
+import kodeKeisho from "../assets/kodekeisho.jpg";
 import techTrek from "../assets/techtrek.jpg";
-import battleDomeX from "../assets/battledomex.jpg";
 const technicalEvents = [
   {
     id: 1,
