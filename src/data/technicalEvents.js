@@ -127,7 +127,7 @@ const technicalEvents = [
     shortTitle: "AI Cineverse",
     category: "Digital / AI",
     image:
-      "https://ibb.co/q3njmsNs",
+      "https://freeimage.host/i/qf2KPRf",
     overview:
       "Individual or duo competition to produce an original AI-generated short film (visuals + narration). Focus on creativity, ethical AI use, and storytelling.",
     eventDetails: {
