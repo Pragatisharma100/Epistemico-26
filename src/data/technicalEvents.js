@@ -1,3 +1,4 @@
+import aiCineverseImg from "../assets/AI CINEVERSE.jpg";
 const technicalEvents = [
   {
     id: 1,
@@ -126,8 +127,7 @@ const technicalEvents = [
     title: "AI Cineverse — AI Video Storytelling Challenge",
     shortTitle: "AI Cineverse",
     category: "Digital / AI",
-    image:
-      "C:\Users\ACER\OneDrive\Desktop\Epistemico-26-1\src\assets\AI CINEVERSE.jpg",
+    image: aiCineverseImg,
     overview:
       "Individual or duo competition to produce an original AI-generated short film (visuals + narration). Focus on creativity, ethical AI use, and storytelling.",
     eventDetails: {
