@@ -103,7 +103,7 @@ const culturalEvents = [
     title: "SOLO SINGING - EUPHONY",
     shortTitle: "Euphony",
     category: "Solo Singing",
-    image: "https://ibb.co/chLxxcsH",
+    image: "https://ibb.co/ZRHgtxMX",
     overview:
       "Euphony is a solo singing competition celebrating vocal talent, modulation, and audience connection.",
     totalParticipants: "10",

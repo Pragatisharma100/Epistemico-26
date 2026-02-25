@@ -58,7 +58,7 @@ const technicalEvents = [
     shortTitle: "TechTrek",
     category: "Treasure Hunt",
     image:
-      "https://ibb.co/Mk7c4P4N",
+      "https://ibb.co/qFYmcKJT",
     overview:
       "Campus-wide technical treasure hunt combining logical reasoning, programming concepts, and digital puzzles across physical locations and web-based clues.",
     eventDetails: {
