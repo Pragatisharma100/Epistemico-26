@@ -127,7 +127,7 @@ const culturalEvents = [
     title: "FASHION WALK - MET-GALA (THE GWECA EDITION)",
     shortTitle: "Met-Gala",
     category: "Fashion Walk",
-    image: "https://ibb.co/hRpLXmts",
+    image: "C:\Users\ACER\OneDrive\Desktop\Epistemico-26-1\src\assets\MET GALA-landscape.png",
     overview:
       "MET-GALA celebrates style, confidence and creative presentation on the ramp, focusing on elegance and innovation.",
     maxTeams: "12 Teams",
