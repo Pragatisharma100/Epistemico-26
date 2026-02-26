@@ -10,22 +10,22 @@ import literaryImg from "../assets/literary.jpg";
 
 const eventsData = [
   {
-    title: "Technical Committee",
+    title: "Technical",
     description: "Gear up for an exhilarating Tech Quiz that transcends the ordinary, testing not just what you know, but how well you apply it.",
     image: techImg
   },
   {
-    title: "Cultural Committee",
+    title: "Cultural",
     description: "Elevate your voice and join the symphony of emotions at 'HARMONY HYPE,' where singing isn't just an art; it's a journey through the soul.",
     image: culturalImg
   },
   {
-    title: "Innovation Committee",
+    title: "Innovation",
     description: "कला akriti : Indulge in a canvas of love as 'कला akriti' unveils cultural expressions, each stroke whispering tales of passion.",
     image: innovationImg
   },
   {
-    title: "Literary Committee",
+    title: "Literary",
     description: "LITERARY HEAVEN: Escape to 'Literary Heaven', a celestial space where books are gateways and words from constellations.",
     image: literaryImg
   }
@@ -35,13 +35,13 @@ export default function Events() {
   const navigate = useNavigate();
 
   const handleEventClick = (eventTitle) => {
-    if (eventTitle === "Innovation Committee") {
+    if (eventTitle === "Innovation") {
       navigate("/innovation");
-    } else if (eventTitle === "Technical Committee") {
+    } else if (eventTitle === "Technical") {
       navigate("/technical");
-    } else if (eventTitle === "Literary Committee") {
+    } else if (eventTitle === "Literary") {
       navigate("/literary");
-    } else if (eventTitle === "Cultural Committee") {
+    } else if (eventTitle === "Cultural") {
       navigate("/cultural");
     }
   };
