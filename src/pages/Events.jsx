@@ -52,10 +52,9 @@ export default function Events() {
       {/* pt-44 creates the space between navbar and content */}
       <main className="max-w-7xl mx-auto px-4 pt-44 pb-12">
         {/* UPDATED: Changed from font-samarkan to match Navbar link style */}
-        <h1 className="text-4xl font-bold text-center text-brownDark uppercase tracking-widest mb-12 drop-shadow-md">
-          Fest Events
-        </h1>
-        
+        <h1 className="text-4xl font-extrabold text-center text-brownDark font-samarkan mb-12 drop-shadow-md">
+  Fest Events
+</h1>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 items-stretch">
           {eventsData.map((event, index) => (
             <div key={index} className="glass-card group rounded-xl overflow-hidden hover:scale-[1.02] transition-all duration-500 hover:shadow-xl flex flex-col h-full border-2 border-brownMid/20">
