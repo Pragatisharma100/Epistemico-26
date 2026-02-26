@@ -83,6 +83,14 @@ const casCommittees = [
     ]
   },
   {
+    title: "INNOVATION COMMITTEE",
+    members: [
+      { name: "PREETI RAWAT", role: "HEAD", image: preetiRawatImg },
+      { name: "SONI KUMARI", role: "HEAD", image: soniKumariImg },
+      { name: "HARSHITA GUPTA", role: "SUB-HEAD", image: harshitaGuptaImg }
+    ]
+  },
+  {
     title: "CULTURAL COMMITTEE",
     members: [
       { name: "NAMRATA SINGH", role: "HEAD", image: namrataSinghImg },
@@ -90,14 +98,6 @@ const casCommittees = [
       { name: "AAYUSHI TAK", role: "HEAD", image: aayushiTakImg },
       { name: "KUMKUM RATHORE", role: "SUB-HEAD", image: kumkumRathoreImg },
       { name: "KIRTI SAROHIYA", role: "SUB-HEAD", image: kirtiSarohiyaImg }
-    ]
-  },
-  {
-    title: "INNOVATION COMMITTEE",
-    members: [
-      { name: "PREETI RAWAT", role: "HEAD", image: preetiRawatImg },
-      { name: "SONI KUMARI", role: "HEAD", image: soniKumariImg },
-      { name: "HARSHITA GUPTA", role: "SUB-HEAD", image: harshitaGuptaImg }
     ]
   },
   {
@@ -112,71 +112,77 @@ const casCommittees = [
   }
 ];
 
-const executiveTeams = [
+const technicalExecutives = {
+  title: "TECHNICAL EXECUTIVES",
+  members: [
+    { name: "TANISHKA SAHU", role: "4TH YEAR", image: tanishkaSahuImg },
+    { name: "TISHA LALCHANDANI", role: "4TH YEAR", image: tishaLalchandaniImg },
+    { name: "PRAGATI SHARMA", role: "4TH YEAR", image: pragatiSharmaImg },
+    { name: "SHWETA JACOB", role: "4TH YEAR", image: shwetaJacobImg },
+    { name: "PRIYANSHI AGARWAL", role: "3RD YEAR", image: priyanshiAgarwalImg },
+    { name: "YASHIKA MENGHANI", role: "3RD YEAR", image: yashikaMenghaniImg },
+    { name: "BHAWANA SHARMA", role: "4TH YEAR", image: bhawanaSharmaImg },
+    { name: "ANUSHKA SHARMA", role: "4TH YEAR", image: anushkaSharmaImg },
+    { name: "NITESH NAYAK", role: "4TH YEAR", image: niteshNayakImg },
+    { name: "ARSHPREET KAUR", role: "4TH YEAR", image: arshpreetKaurImg }
+  ]
+};
+
+const pairedExecutives = [
   {
-    title: "TECHNICAL EXECUTIVES",
-    members: [
-      { name: "TANISHKA SAHU", role: "4TH YEAR", image: tanishkaSahuImg },
-      { name: "TISHA LALCHANDANI", role: "4TH YEAR", image: tishaLalchandaniImg },
-      { name: "PRAGATI SHARMA", role: "4TH YEAR", image: pragatiSharmaImg },
-      { name: "SHWETA JACOB", role: "4TH YEAR", image: shwetaJacobImg },
-      { name: "PRIYANSHI AGARWAL", role: "3RD YEAR", image: priyanshiAgarwalImg },
-      { name: "YASHIKA MENGHANI", role: "3RD YEAR", image: yashikaMenghaniImg },
-      { name: "BHAWANA SHARMA", role: "4TH YEAR", image: bhawanaSharmaImg },
-      { name: "ANUSHKA SHARMA", role: "4TH YEAR", image: anushkaSharmaImg },
-      { name: "NITESH NAYAK", role: "4TH YEAR", image: niteshNayakImg },
-      { name: "ARSHPREET KAUR", role: "4TH YEAR", image: arshpreetKaurImg }
-    ]
+    left: {
+      title: "CREATIVE EXECUTIVES",
+      members: [
+        { name: "KHUSHI KHATRI", role: "4TH YEAR", image: khushiKhatriImg },
+        { name: "NANDINI RATHORE", role: "4TH YEAR", image: nandiniRathoreImg },
+        { name: "PALAK MAROTHIYA", role: "3RD YEAR", image: palakMarothiyaImg },
+        { name: "RIDHIMA CHAKRABORTY", role: "3RD YEAR", image: ridhimaImg },
+        { name: "BHAVYTA RAMAWAT", role: "3RD YEAR", image: bhavytaImg }
+      ]
+    },
+    right: {
+      title: "CULTURAL EXECUTIVES",
+      members: [
+        { name: "DHWANI JAIN", role: "4TH YEAR", image: dhwaniImg },
+        { name: "AMBIKA MATHUR", role: "4TH YEAR", image: ambikaImg },
+        { name: "AAYUSHI RAJGURU", role: "4TH YEAR", image: aayushiRajImg },
+        { name: "TITIKSHA", role: "3RD YEAR", image: titikshaImg },
+        { name: "RENU RATHORE", role: "3RD YEAR", image: renuImg }
+      ]
+    }
   },
   {
-    title: "PUBLIC RELATIONS (PR)",
-    members: [
-      { name: "SHRUTI SETHI", role: "4TH YEAR", image: shrutiSethiImg },
-      { name: "PRIYANSHI JAIN", role: "4TH YEAR", image: priyanshiJainImg },
-      { name: "RICHA SHRIVASTAVA", role: "3RD YEAR", image: richaShrivastavaImg }
-    ]
-  },
-  {
-    title: "CREATIVE EXECUTIVES",
-    members: [
-      { name: "KHUSHI KHATRI", role: "4TH YEAR", image: khushiKhatriImg },
-      { name: "NANDINI RATHORE", role: "4TH YEAR", image: nandiniRathoreImg },
-      { name: "PALAK MAROTHIYA", role: "3RD YEAR", image: palakMarothiyaImg },
-      { name: "RIDHIMA CHAKRABORTY", role: "3RD YEAR", image: ridhimaImg },
-      { name: "BHAVYTA RAMAWAT", role: "3RD YEAR", image: bhavytaImg }
-    ]
-  },
-  {
-    title: "CULTURAL EXECUTIVES",
-    members: [
-      { name: "DHWANI JAIN", role: "4TH YEAR", image: dhwaniImg },
-      { name: "AMBIKA MATHUR", role: "4TH YEAR", image: ambikaImg },
-      { name: "AAYUSHI RAJGURU", role: "4TH YEAR", image: aayushiRajImg },
-      { name: "TITIKSHA", role: "3RD YEAR", image: titikshaImg },
-      { name: "RENU RATHORE", role: "3RD YEAR", image: renuImg }
-    ]
-  },
-  {
-    title: "GROUNDWORK EXECUTIVES",
-    members: [
-      { name: "EKTA SHARMA", role: "4TH YEAR", image: ektaImg },
-      { name: "LAVISHKA RATHORE", role: "4TH YEAR", image: lavishkaImg },
-      { name: "DIVYANSHI SEN", role: "3RD YEAR", image: divyanshiImg },
-      { name: "GARIMA RAWAT", role: "3RD YEAR", image: garimaRawatImg },
-      { name: "RISHITA GURJAR", role: "3RD YEAR", image: rishitaImg }
-    ]
-  },
-  {
-    title: "SOCIAL MEDIA / OUTREACH",
-    members: [
-      { name: "SWATI ANAND", role: "4TH YEAR", image: swatiAnandImg },
-      { name: "VRATIKA KUMAWAT", role: "3RD YEAR", image: vratikaImg },
-      { name: "TRAPTI JAIN", role: "3RD YEAR", image: traptiImg },
-      { name: "ANUSHKA CHOUDHARY", role: "3RD YEAR", image: anushkaChoudharyImg },
-      { name: "KRITI CHAUHAN", role: "3RD YEAR", image: kritiChauhanImg }
-    ]
+    left: {
+      title: "GROUNDWORK EXECUTIVES",
+      members: [
+        { name: "EKTA SHARMA", role: "4TH YEAR", image: ektaImg },
+        { name: "LAVISHKA RATHORE", role: "4TH YEAR", image: lavishkaImg },
+        { name: "DIVYANSHI SEN", role: "3RD YEAR", image: divyanshiImg },
+        { name: "GARIMA RAWAT", role: "3RD YEAR", image: garimaRawatImg },
+        { name: "RISHITA GURJAR", role: "3RD YEAR", image: rishitaImg }
+      ]
+    },
+    right: {
+      title: "SOCIAL MEDIA / OUTREACH",
+      members: [
+        { name: "SWATI ANAND", role: "4TH YEAR", image: swatiAnandImg },
+        { name: "VRATIKA KUMAWAT", role: "3RD YEAR", image: vratikaImg },
+        { name: "TRAPTI JAIN", role: "3RD YEAR", image: traptiImg },
+        { name: "ANUSHKA CHOUDHARY", role: "3RD YEAR", image: anushkaChoudharyImg },
+        { name: "KRITI CHAUHAN", role: "3RD YEAR", image: kritiChauhanImg }
+      ]
+    }
   }
 ];
+
+const prExecutives = {
+  title: "PUBLIC RELATIONS (PR)",
+  members: [
+    { name: "SHRUTI SETHI", role: "4TH YEAR", image: shrutiSethiImg },
+    { name: "PRIYANSHI JAIN", role: "4TH YEAR", image: priyanshiJainImg },
+    { name: "RICHA SHRIVASTAVA", role: "3RD YEAR", image: richaShrivastavaImg }
+  ]
+};
 
 export default function Team() {
   const imgStyle = {
@@ -185,6 +191,23 @@ export default function Team() {
     objectFit: 'cover',
     objectPosition: 'center 15%'
   };
+
+  const TeamCard = ({ title, members, gridCols = "grid-cols-4" }) => (
+    <div className="glass-card p-4 rounded-xl hover:bg-white/50 transition-colors duration-300 border-2 border-brownMid/20 h-full">
+      <h3 className="text-[11px] font-bold text-brownMid tracking-[0.2em] mb-4 text-center uppercase border-b border-brownDark/10 pb-1">{title}</h3>
+      <div className={`grid ${gridCols} gap-3`}>
+        {members.map((m, j) => (
+          <div key={j} className="flex flex-col items-center text-center group">
+            <div className="w-14 h-14 rounded-full border-2 border-brownDark/10 mb-2 bg-white/20 overflow-hidden group-hover:scale-110 transition-transform shadow-sm bg-white/40">
+              <img src={m.image} alt={m.name} style={imgStyle} onError={(e) => { e.target.src = "https://via.placeholder.com/80"; }} />
+            </div>
+            <p className="text-[8px] font-bold text-brownDark leading-tight">{m.name}</p>
+            <p className="text-[7px] text-brownMid mt-1 font-bold uppercase">{m.role}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
 
   return (
     <div className="min-h-screen">
@@ -207,6 +230,7 @@ export default function Team() {
           ))}
         </div>
 
+        {/* CAS COMMITTEE Section */}
         <div className="text-center mb-6">
           <h2 className="text-2xl font-bold text-brownDark font-samarkan border-b-2 border-brownDark/20 inline-block px-10">CAS COMMITTEE</h2>
         </div>
@@ -229,26 +253,31 @@ export default function Team() {
           ))}
         </div>
 
+        {/* EXECUTIVE TEAM Section */}
         <div className="text-center mb-6">
           <h2 className="text-2xl font-bold text-brownDark font-samarkan border-b-2 border-brownDark/20 inline-block px-10">EXECUTIVE TEAM</h2>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          {executiveTeams.map((team, i) => (
-            <div key={i} className="glass-card p-4 rounded-xl hover:bg-white/50 transition-colors duration-300 border-2 border-brownMid/20">
-              <h3 className="text-[11px] font-bold text-brownMid tracking-[0.2em] mb-4 text-center uppercase border-b border-brownDark/10 pb-1">{team.title}</h3>
-              <div className="grid grid-cols-4 gap-3">
-                {team.members.map((m, j) => (
-                  <div key={j} className="flex flex-col items-center text-center group">
-                    <div className="w-14 h-14 rounded-full border-2 border-brownDark/10 mb-2 bg-white/20 overflow-hidden group-hover:scale-110 transition-transform shadow-sm bg-white/40">
-                      <img src={m.image} alt={m.name} style={imgStyle} onError={(e) => { e.target.src = "https://via.placeholder.com/80"; }} />
-                    </div>
-                    <p className="text-[8px] font-bold text-brownDark leading-tight">{m.name}</p>
-                    <p className="text-[7px] text-brownMid mt-1 font-bold uppercase">{m.role}</p>
-                  </div>
-                ))}
-              </div>
+        
+        <div className="space-y-6">
+          {/* Row 1: Technical Executives (10 members in one row) */}
+          <div className="w-full">
+            <TeamCard title={technicalExecutives.title} members={technicalExecutives.members} gridCols="grid-cols-5 md:grid-cols-10" />
+          </div>
+
+          {/* Row 2 & 3: Paired Executives (Tree manner) */}
+          {pairedExecutives.map((pair, idx) => (
+            <div key={idx} className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <TeamCard title={pair.left.title} members={pair.left.members} gridCols="grid-cols-5" />
+              <TeamCard title={pair.right.title} members={pair.right.members} gridCols="grid-cols-5" />
             </div>
           ))}
+
+          {/* Row 4: PR Executives (Last centered) */}
+          <div className="flex justify-center">
+            <div className="w-full md:w-1/2">
+              <TeamCard title={prExecutives.title} members={prExecutives.members} gridCols="grid-cols-3" />
+            </div>
+          </div>
         </div>
       </main>
       <Footer />
