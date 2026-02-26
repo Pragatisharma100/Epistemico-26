@@ -1,7 +1,11 @@
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 
-// Asset Imports
+// Asset Imports - Leadership
+import gargiSharmaImg from "../assets/team/CAS Heads/gargi-sharma.jpg";
+import himanshiRathoreImg from "../assets/team/CAS Heads/himanshi-rathore.jpg";
+
+// Asset Imports - Committee Heads
 import preetiRawatImg from "../assets/team/CAS Heads/preeti-rawat.jpg";
 import soniKumariImg from "../assets/team/CAS Heads/soni kumari.jpg";
 import anushkaNepalpuriImg from "../assets/team/CAS Heads/anushka-nepalpuri.jpg";
@@ -12,6 +16,11 @@ import namrataSinghImg from "../assets/team/CAS Heads/namrata-singh.jpg";
 import dishaChhipaImg from "../assets/team/CAS Heads/disha-chhipa.jpg";
 import sakshiFauzdarImg from "../assets/team/CAS Heads/sakshi-fauzdar.jpg";
 import sonakshiReniyaImg from "../assets/team/CAS Heads/sonakshi-reniya.jpg";
+
+const leadership = [
+  { name: "GARGI SHARMA", role: "PRESIDENT", phone: "6375378484", image: gargiSharmaImg },
+  { name: "HIMANSHI RATHORE", role: "VICE PRESIDENT", phone: "8690219281", image: himanshiRathoreImg }
+];
 
 const contactSections = [
   {
@@ -57,13 +66,38 @@ export default function Contact() {
   return (
     <div className="min-h-screen">
       <Navbar />
-      {/* pt-44 ensures content starts below the fixed navbar */}
       <main className="max-w-6xl mx-auto px-4 pt-44 pb-12">
         <div className="text-center mb-12">
-          <h1 className="text-4xl font-bold text-brownDark font-samarkan drop-shadow-sm uppercase">CONTACT US</h1>
+          <h1 className="text-4xl font-bold text-brownDark font-samarkan drop-shadow-sm uppercase tracking-widest">CONTACT US</h1>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        {/* Leadership Section - Centered and Aesthetic */}
+        <div className="flex flex-col items-center mb-16">
+          <div className="glass-card p-8 rounded-2xl border-2 border-brownMid/30 max-w-2xl w-full">
+            <h2 className="text-[16px] text-center font-bold text-brownMid tracking-[0.3em] mb-8 uppercase border-b-2 border-brownDark/10 pb-2 font-samarkan">
+              CAS HEAD 
+            </h2>
+            <div className="flex flex-col md:flex-row justify-center gap-12">
+              {leadership.map((leader, i) => (
+                <div key={i} className="flex flex-col items-center group">
+                  <div className="w-24 h-24 rounded-full border-4 border-brownDark/20 overflow-hidden shadow-lg group-hover:scale-110 transition-transform duration-500 bg-white/20">
+                    <img src={leader.image} alt={leader.name} style={imgStyle} />
+                  </div>
+                  <div className="mt-4 text-center">
+                    <h3 className="text-[13px] font-bold text-brownDark uppercase tracking-wider">{leader.name}</h3>
+                    <p className="text-[10px] text-brownMid font-extrabold tracking-tighter uppercase mb-2">{leader.role}</p>
+                    <a href={`tel:${leader.phone}`} className="text-[11px] bg-brownDark/10 px-3 py-1 rounded-full text-brownDark font-bold hover:bg-brownDark hover:text-white transition-all">
+                      {leader.phone}
+                    </a>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+
+        {/* Committee Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {contactSections.map((section, i) => (
             <div key={i} className="glass-card p-6 rounded-xl hover:bg-white/50 transition-colors duration-300 border-2 border-brownMid/20">
               <h2 className="text-[14px] text-center font-bold text-brownMid tracking-[0.2em] mb-6 uppercase border-b border-brownDark/10 pb-2 font-samarkan">
@@ -72,14 +106,14 @@ export default function Contact() {
               <div className="flex flex-col gap-6">
                 {section.members.map((m, j) => (
                   <div key={j} className="flex items-center gap-6 group">
-                    <div className="w-20 h-20 rounded-full border-2 border-brownDark/20 overflow-hidden shadow-sm group-hover:scale-105 transition-transform bg-white/20">
+                    <div className="w-16 h-16 rounded-full border-2 border-brownDark/20 overflow-hidden shadow-sm group-hover:scale-105 transition-transform bg-white/20">
                       <img src={m.image} alt={m.name} style={imgStyle} />
                     </div>
                     <div>
                       <h3 className="text-[12px] font-bold text-brownDark leading-tight uppercase tracking-wider">
                         {m.name}
                       </h3>
-                      <a href={`tel:${m.phone}`} className="text-[11px] text-brownMid font-bold mt-2 block hover:text-brownDark transition-colors">
+                      <a href={`tel:${m.phone}`} className="text-[11px] text-brownMid font-bold mt-1 block hover:text-brownDark transition-colors">
                         PHONE: {m.phone}
                       </a>
                     </div>
