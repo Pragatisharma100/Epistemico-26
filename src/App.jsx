@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route, useLocation } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route, useLocation, useNavigate } from "react-router-dom";
 import { AnimatePresence, motion } from "framer-motion";
 import { useState } from "react";
 
@@ -18,46 +18,49 @@ import SplashScreen from "./pages/SplashScreen";
 
 /* 🔹 Page transition variants */
 const pageVariants = {
-  initial: {
-    x: 100,
-    opacity: 0,
-  },
-  animate: {
-    x: 0,
-    opacity: 1,
-  },
-  exit: {
-    x: -100,
-    opacity: 0,
-  },
+  initial: { x: 100, opacity: 0 },
+  animate: { x: 0, opacity: 1 },
+  exit: { x: -100, opacity: 0 },
 };
 
-/* 🔹 Animated Routes Wrapper */
 function AnimatedRoutes() {
   const location = useLocation();
-  const [showSplash, setShowSplash] = useState(true);
+  const navigate = useNavigate();
 
   return (
     <AnimatePresence mode="wait">
       <Routes location={location} key={location.pathname}>
         
-        {/* HOME / SPLASH */}
+        {/* 🔹 SPLASH SCREEN (Root Path) */}
         <Route
           path="/"
           element={
-            showSplash ? (
-              <SplashScreen onEnter={() => setShowSplash(false)} />
-            ) : (
-              <motion.div
-                variants={pageVariants}
-                initial="initial"
-                animate="animate"
-                exit="exit"
-                transition={{ duration: 0.4, ease: "easeOut" }}
-              >
-                <Home />
-              </motion.div>
-            )
+            <motion.div
+              variants={pageVariants}
+              initial="initial"
+              animate="animate"
+              exit="exit"
+              transition={{ duration: 0.4 }}
+            >
+              {/* Navigate to /home when "Explore" is clicked */}
+              <SplashScreen onEnter={() => navigate("/home")} />
+            </motion.div>
+          }
+        />
+
+        {/* 🔹 HOME PAGE (Separate Path for History Support) */}
+        <Route
+          path="/home"
+          element={
+            <motion.div
+              variants={pageVariants}
+              initial="initial"
+              animate="animate"
+              exit="exit"
+              transition={{ duration: 0.4, ease: "easeOut" }}
+            >
+              <Home />
+            </motion.div>
           }
         />
 

@@ -15,8 +15,6 @@ const SplashScreen = ({ onEnter }) => {
 
       {/* CONTENT */}
       <div className="absolute inset-0 flex flex-col items-center justify-center text-center -translate-x-6 px-4 leading-tight">
-        {/* TOP TEXT */}
-        {/* TOP TEXT */}
         <div className="mt-10 translate-x-4 md:translate-x-0">
           <motion.p
             className="text-2xl md:text-2xl font-extrabold text-[#4a2c1a]"
@@ -55,10 +53,9 @@ const SplashScreen = ({ onEnter }) => {
           transition={{ duration: 1 }}
         />
 
-        {/* SANSKRIT (FIXED) */}
+        {/* SANSKRIT */}
         <motion.p
-          className="text-4xl font-extrabold text-[#4a2c1a] -mt-11 translate-x-4 md:translate-x-0
-"
+          className="text-4xl font-extrabold text-[#4a2c1a] -mt-11 translate-x-4 md:translate-x-0"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 1 }}
@@ -68,8 +65,7 @@ const SplashScreen = ({ onEnter }) => {
 
         {/* ENGLISH LINE */}
         <motion.p
-          className="text-base font-bold text-[#4a2c1a] mt-1.5 translate-x-4 md:translate-x-0
-"
+          className="text-base font-bold text-[#4a2c1a] mt-1.5 translate-x-4 md:translate-x-0"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 1.2 }}
@@ -79,8 +75,7 @@ const SplashScreen = ({ onEnter }) => {
 
         {/* DATE */}
         <motion.h2
-          className="text-2xl md:text-4xl font-extrabold mt-1 text-[#4a2c1a] translate-x-4 md:translate-x-0
-"
+          className="text-2xl md:text-4xl font-extrabold mt-1 text-[#4a2c1a] translate-x-4 md:translate-x-0"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 1.4 }}
@@ -89,24 +84,23 @@ const SplashScreen = ({ onEnter }) => {
         </motion.h2>
 
         {/* EXPLORE BUTTON */}
-<motion.button
-  onClick={onEnter}
-  className="mt-1 px-6 py-2 border-2 border-[#4a2c1a] text-[#4a2c1a] font-bold rounded-full translate-x-4 md:translate-x-0"
-  style={{
-    fontFamily: "Georgia, serif",
-    fontStyle: "italic",
-    backgroundColor: "rgba(255,255,255,0.25)",
-    backdropFilter: "blur(3px)"
-  }}
-  initial={{ opacity: 0, y: 15 }}
-  animate={{ opacity: 1, y: 0 }}
-  transition={{ delay: 2 }}
-  whileHover={{ scale: 1.07, backgroundColor: "rgba(255,255,255,0.4)" }}
-  whileTap={{ scale: 0.95 }}
->
-  Explore
-</motion.button>
-
+        <motion.button
+          onClick={onEnter}
+          className="mt-1 px-6 py-2 border-2 border-[#4a2c1a] text-[#4a2c1a] font-bold rounded-full translate-x-4 md:translate-x-0"
+          style={{
+            fontFamily: "Georgia, serif",
+            fontStyle: "italic",
+            backgroundColor: "rgba(255,255,255,0.25)",
+            backdropFilter: "blur(3px)"
+          }}
+          initial={{ opacity: 0, y: 15 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 2 }}
+          whileHover={{ scale: 1.07, backgroundColor: "rgba(255,255,255,0.4)" }}
+          whileTap={{ scale: 0.95 }}
+        >
+          Explore
+        </motion.button>
       </div>
     </div>
   );
