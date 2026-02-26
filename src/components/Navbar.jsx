@@ -25,7 +25,7 @@ export default function Navbar() {
         {/* Brand */}
         <div className="flex flex-col items-start">
           <h1 className="font-samarkan text-3xl text-brownDark leading-none tracking-wider">
-            epistemico
+            Epistemico'26
           </h1>
           <span className="font-samarkan text-[10px] text-brownMid tracking-[0.2em] mt-1 uppercase">
             Vasudhaiva Kutumbakam
