@@ -51,7 +51,8 @@ export default function Events() {
       <Navbar />
       {/* pt-44 creates the space between navbar and content */}
       <main className="max-w-7xl mx-auto px-4 pt-44 pb-12">
-        <h1 className="text-4xl font-extrabold text-center text-brownDark font-samarkan mb-12 drop-shadow-md">
+        {/* UPDATED: Changed from font-samarkan to match Navbar link style */}
+        <h1 className="text-4xl font-bold text-center text-brownDark uppercase tracking-widest mb-12 drop-shadow-md">
           Fest Events
         </h1>
         
@@ -65,7 +66,8 @@ export default function Events() {
                   className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" 
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent" />
-                <h3 className="absolute bottom-2 left-3 text-lg font-bold text-white font-samarkan leading-tight">
+                {/* UPDATED: Changed from font-samarkan to match Navbar link style */}
+                <h3 className="absolute bottom-2 left-3 text-sm font-bold text-white uppercase tracking-widest leading-tight">
                   {event.title}
                 </h3>
               </div>
