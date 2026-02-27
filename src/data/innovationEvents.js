@@ -1,10 +1,14 @@
+import uiux from "../assets/uiux.jpg";
+import ekWorldArtImg from "../assets/ek world art.jpg";
+import sharkTankImg from "../assets/starktank.jpg";
+import humanLudoImg from "../assets/humanludo.jpg";
 const innovationEvents = [
   {
     id: 1,
     title: "UI/UX Design Event – Complete Step-by-Step Guide",
     shortTitle: "UI/UX Design",
     category: "Design Competition",
-    image: "https://images.unsplash.com/photo-1505685296765-3a2736de412f?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3&s=9b0f2c4d0d4b6f5f0c4b2a1f6f7a3b2c",
+     image: uiux,
     overview:
       "This UI/UX Design event is a creativity and problem-solving based competition where participants design a simple and user-friendly interface to solve a real-world problem. Coding is not required.",
     problemStatement:
@@ -75,7 +79,7 @@ const innovationEvents = [
     title: "EkWorld Art – Canvas Painting Event",
     shortTitle: "EkWorld Art",
     category: "Canvas Painting Event",
-    image: "https://images.unsplash.com/photo-1504198458649-3128b932f49b?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3&s=6d9d2f0f3a4b8c2d1e6f7a8b9c0d1e2f",
+    image: ekWorldArtImg,
     overview:
       "EkWorld Art is a creative canvas painting competition where participants express ideas, emotions, and themes through art. The event focuses on originality, creativity, and artistic presentation.",
     problemStatement:
@@ -139,7 +143,7 @@ const innovationEvents = [
     title: "Shark Tank GWECA Edition – Pitch • Innovate • Inspire",
     shortTitle: "Shark Tank",
     category: "Innovation & Pitching Event",
-    image: "https://images.unsplash.com/photo-1519389950473-47ba0277781c?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3&s=5f6a7b8c9d0e1f2a3b4c5d6e7f8a9b0c",
+    image: sharkTankImg,
     overview:
       "The objective of Shark Tank GWECA Edition is to encourage students to present business or startup ideas with innovative solutions. The event aims to foster entrepreneurial thinking, creativity, problem-solving skills, and awareness of societal applications through idea pitching in a competitive and engaging environment.",
     problemStatement:
@@ -203,7 +207,7 @@ const innovationEvents = [
     title: "Human Ludo – Where Strategy Meets Fun",
     shortTitle: "Human Ludo",
     category: "Strategic Team Competition",
-    image: "https://images.unsplash.com/photo-1546182990-dffeafbe841d?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3&s=8a7b6c5d4e3f2a1b0c9d8e7f6a5b4c3d",
+    image: humanLudoImg,
     overview:
       "Human Ludo is a large-scale version of the traditional Ludo game played by participants themselves as tokens on a giant board. Teams compete against each other by moving strategically based on dice rolls and game rules.",
     eventDetails: {
