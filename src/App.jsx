@@ -1,7 +1,7 @@
 import { BrowserRouter as Router, Routes, Route, useLocation, useNavigate } from "react-router-dom";
 import { AnimatePresence, motion } from "framer-motion";
-import { useState } from "react";
 
+// Page Imports
 import Home from "./pages/Home";
 import Events from "./pages/Events";
 import Innovation from "./pages/Innovation";
@@ -15,6 +15,7 @@ import CulturalDetail from "./pages/CulturalDetail";
 import Team from "./pages/Team";
 import Contact from "./pages/Contact";
 import SplashScreen from "./pages/SplashScreen";
+import Gallery from "./pages/Gallery"; 
 
 /* 🔹 Page transition variants */
 const pageVariants = {
@@ -29,9 +30,10 @@ function AnimatedRoutes() {
 
   return (
     <AnimatePresence mode="wait">
+      {/* The key={location.pathname} is essential for Framer Motion to detect route changes */}
       <Routes location={location} key={location.pathname}>
         
-        {/* 🔹 SPLASH SCREEN (Root Path) */}
+        {/* 🔹 SPLASH SCREEN */}
         <Route
           path="/"
           element={
@@ -42,13 +44,12 @@ function AnimatedRoutes() {
               exit="exit"
               transition={{ duration: 0.4 }}
             >
-              {/* Navigate to /home when "Explore" is clicked */}
               <SplashScreen onEnter={() => navigate("/home")} />
             </motion.div>
           }
         />
 
-        {/* 🔹 HOME PAGE (Separate Path for History Support) */}
+        {/* 🔹 HOME PAGE */}
         <Route
           path="/home"
           element={
@@ -64,7 +65,23 @@ function AnimatedRoutes() {
           }
         />
 
-        {/* EVENTS */}
+        {/* 🔹 GALLERY PAGE */}
+        <Route
+          path="/gallery"
+          element={
+            <motion.div
+              variants={pageVariants}
+              initial="initial"
+              animate="animate"
+              exit="exit"
+              transition={{ duration: 0.4, ease: "easeOut" }}
+            >
+              <Gallery />
+            </motion.div>
+          }
+        />
+
+        {/* 🔹 EVENTS & CATEGORIES */}
         <Route
           path="/events"
           element={
@@ -81,164 +98,64 @@ function AnimatedRoutes() {
         />
 
         {/* INNOVATION */}
-        <Route
-          path="/innovation/"
-          element={
-            <motion.div
-              variants={pageVariants}
-              initial="initial"
-              animate="animate"
-              exit="exit"
-              transition={{ duration: 0.4, ease: "easeOut" }}
-            >
-              <Innovation />
-            </motion.div>
-          }
-        />
-
-        {/* INNOVATION - DETAIL */}
-        <Route
-          path="/innovation/:id"
-          element={
-            <motion.div
-              variants={pageVariants}
-              initial="initial"
-              animate="animate"
-              exit="exit"
-              transition={{ duration: 0.4, ease: "easeOut" }}
-            >
-              <InnovationDetail />
-            </motion.div>
-          }
-        />
-
-        {/* TEAM */}
-        <Route
-          path="/team"
-          element={
-            <motion.div
-              variants={pageVariants}
-              initial="initial"
-              animate="animate"
-              exit="exit"
-              transition={{ duration: 0.4, ease: "easeOut" }}
-            >
-              <Team />
-            </motion.div>
-          }
-        />
+        <Route path="/innovation" element={
+          <motion.div variants={pageVariants} initial="initial" animate="animate" exit="exit" transition={{ duration: 0.4 }}>
+            <Innovation />
+          </motion.div>
+        } />
+        <Route path="/innovation/:id" element={
+          <motion.div variants={pageVariants} initial="initial" animate="animate" exit="exit" transition={{ duration: 0.4 }}>
+            <InnovationDetail />
+          </motion.div>
+        } />
 
         {/* TECHNICAL */}
-        <Route
-          path="/technical/"
-          element={
-            <motion.div
-              variants={pageVariants}
-              initial="initial"
-              animate="animate"
-              exit="exit"
-              transition={{ duration: 0.4, ease: "easeOut" }}
-            >
-              <Technical />
-            </motion.div>
-          }
-        />
-
-        {/* TECHNICAL - DETAIL */}
-        <Route
-          path="/technical/:id"
-          element={
-            <motion.div
-              variants={pageVariants}
-              initial="initial"
-              animate="animate"
-              exit="exit"
-              transition={{ duration: 0.4, ease: "easeOut" }}
-            >
-              <TechnicalDetail />
-            </motion.div>
-          }
-        />
-
-        {/* CONTACT */}
-        <Route
-          path="/contact"
-          element={
-            <motion.div
-              variants={pageVariants}
-              initial="initial"
-              animate="animate"
-              exit="exit"
-              transition={{ duration: 0.4, ease: "easeOut" }}
-            >
-              <Contact />
-            </motion.div>
-          }
-        />
+        <Route path="/technical" element={
+          <motion.div variants={pageVariants} initial="initial" animate="animate" exit="exit" transition={{ duration: 0.4 }}>
+            <Technical />
+          </motion.div>
+        } />
+        <Route path="/technical/:id" element={
+          <motion.div variants={pageVariants} initial="initial" animate="animate" exit="exit" transition={{ duration: 0.4 }}>
+            <TechnicalDetail />
+          </motion.div>
+        } />
 
         {/* LITERARY */}
-        <Route
-          path="/literary/"
-          element={
-            <motion.div
-              variants={pageVariants}
-              initial="initial"
-              animate="animate"
-              exit="exit"
-              transition={{ duration: 0.4, ease: "easeOut" }}
-            >
-              <Literary />
-            </motion.div>
-          }
-        />
-
-        {/* LITERARY - DETAIL */}
-        <Route
-          path="/literary/:id"
-          element={
-            <motion.div
-              variants={pageVariants}
-              initial="initial"
-              animate="animate"
-              exit="exit"
-              transition={{ duration: 0.4, ease: "easeOut" }}
-            >
-              <LiteraryDetail />
-            </motion.div>
-          }
-        />
+        <Route path="/literary" element={
+          <motion.div variants={pageVariants} initial="initial" animate="animate" exit="exit" transition={{ duration: 0.4 }}>
+            <Literary />
+          </motion.div>
+        } />
+        <Route path="/literary/:id" element={
+          <motion.div variants={pageVariants} initial="initial" animate="animate" exit="exit" transition={{ duration: 0.4 }}>
+            <LiteraryDetail />
+          </motion.div>
+        } />
 
         {/* CULTURAL */}
-        <Route
-          path="/cultural"
-          element={
-            <motion.div
-              variants={pageVariants}
-              initial="initial"
-              animate="animate"
-              exit="exit"
-              transition={{ duration: 0.4, ease: "easeOut" }}
-            >
-              <Cultural />
-            </motion.div>
-          }
-        />
+        <Route path="/cultural" element={
+          <motion.div variants={pageVariants} initial="initial" animate="animate" exit="exit" transition={{ duration: 0.4 }}>
+            <Cultural />
+          </motion.div>
+        } />
+        <Route path="/cultural/:id" element={
+          <motion.div variants={pageVariants} initial="initial" animate="animate" exit="exit" transition={{ duration: 0.4 }}>
+            <CulturalDetail />
+          </motion.div>
+        } />
 
-        {/* CULTURAL - DETAIL */}
-        <Route
-          path="/cultural/:id"
-          element={
-            <motion.div
-              variants={pageVariants}
-              initial="initial"
-              animate="animate"
-              exit="exit"
-              transition={{ duration: 0.4, ease: "easeOut" }}
-            >
-              <CulturalDetail />
-            </motion.div>
-          }
-        />
+        {/* TEAM & CONTACT */}
+        <Route path="/team" element={
+          <motion.div variants={pageVariants} initial="initial" animate="animate" exit="exit" transition={{ duration: 0.4 }}>
+            <Team />
+          </motion.div>
+        } />
+        <Route path="/contact" element={
+          <motion.div variants={pageVariants} initial="initial" animate="animate" exit="exit" transition={{ duration: 0.4 }}>
+            <Contact />
+          </motion.div>
+        } />
 
       </Routes>
     </AnimatePresence>
