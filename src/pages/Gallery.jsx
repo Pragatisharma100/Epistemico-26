@@ -19,7 +19,7 @@ const Gallery = () => {
   // Data arrays for photos
   const highlights = Array.from({ length: 10 }, (_, i) => `/gallery-highlight/h${i + 1}.jpg`);
   const guests = ["/gallery-highlight/cg1.jpg", "/gallery-highlight/cg2.jpg"];
-  const awards = ["/gallery-highlight/award1.jpg", "/gallery-highlight/award2.JPG"];
+  const awards = ["src/public/gallery-highlight/award1.jpg", "src/public/gallery-highlight/award2.JPG","src/public/gallery-highlight/award3.JPG", "src/public/gallery-highlight/award4.jpg","src/public/gallery-highlight/award5.jpg"];
   const mainVideo = "/gallery-highlight/highlight_video.mp4";
 
   // Brown color matching your Navbar theme
