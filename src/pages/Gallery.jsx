@@ -3,126 +3,149 @@ import { motion } from "framer-motion";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, Autoplay } from "swiper/modules";
 
-// Import Swiper styles
+// Swiper styles
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 
-// Existing layout components
+// Layout components
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 
-// ✅ Using background.jpeg from assets
+// Background Asset
 import bgImage from "../assets/background.jpeg";
 
-const Gallery = () => {
-  // Data arrays for photos
-  const highlights = Array.from({ length: 10 }, (_, i) => `/gallery-highlight/h${i + 1}.jpg`);
-  const guests = ["/gallery-highlight/cg1.jpg", "/gallery-highlight/cg2.jpg"];
-  const awards = ["/gallery-highlight/award1.jpg", "/gallery-highlight/award2.JPG","/gallery-highlight/award3.JPG", "/gallery-highlight/award4.jpg","/gallery-highlight/award5.jpg"];
-  const mainVideo = "/gallery-highlight/highlight_video.mp4";
+// ✅ 1. Extended Highlights (h1 to h17)
+import h1 from "../assets/gallery-highlight/h1.jpg";
+import h2 from "../assets/gallery-highlight/h2.jpg";
+import h3 from "../assets/gallery-highlight/h3.jpg";
+import h4 from "../assets/gallery-highlight/h4.jpg";
+import h5 from "../assets/gallery-highlight/h5.jpg";
+import h6 from "../assets/gallery-highlight/h6.jpg";
+import h7 from "../assets/gallery-highlight/h7.jpg";
+import h8 from "../assets/gallery-highlight/h8.jpg";
+import h9 from "../assets/gallery-highlight/h9.jpg";
+import h10 from "../assets/gallery-highlight/h10.jpg";
+import h11 from "../assets/gallery-highlight/h11.jpg";
+import h12 from "../assets/gallery-highlight/h12.jpg";
+import h13 from "../assets/gallery-highlight/h13.jpg";
+import h14 from "../assets/gallery-highlight/h14.jpg";
+import h15 from "../assets/gallery-highlight/h15.jpg";
+import h16 from "../assets/gallery-highlight/h16.jpg";
+import h17 from "../assets/gallery-highlight/h17.jpg";
 
-  // Brown color matching your Navbar theme
+// ✅ 2. Extended Chief Guests (cg1 to cg5)
+import cg1 from "../assets/gallery-highlight/cg1.jpg";
+import cg2 from "../assets/gallery-highlight/cg2.jpg";
+import cg3 from "../assets/gallery-highlight/cg3.jpeg";
+import cg4 from "../assets/gallery-highlight/cg4.jpg";
+import cg5 from "../assets/gallery-highlight/cg5.jpg";
+
+// ✅ 3. Awards
+import award1 from "../assets/gallery-highlight/award1.jpg";
+import award2 from "../assets/gallery-highlight/award2.JPG"; 
+import award3 from "../assets/gallery-highlight/award3.JPG";
+import award4 from "../assets/gallery-highlight/award4.jpg";
+import award5 from "../assets/gallery-highlight/award5.jpg";
+
+import mainVideo from "../assets/gallery-highlight/highlight_video.mp4";
+
+const Gallery = () => {
+  const highlights = [h1, h2, h3, h4, h5, h6, h7, h8, h9, h10, h11, h12, h13, h14, h15, h16, h17];
+  const guests = [cg1, cg2, cg3, cg4, cg5];
+  const awardsList = [award1, award2, award3, award4, award5];
   const navbarBrown = "#4a2c2a"; 
 
   return (
     <div 
-      className="min-h-screen relative font-sans" 
+      className="min-h-screen relative font-sans pt-28" 
       style={{ 
         backgroundImage: `url(${bgImage})`,
-        backgroundSize: "cover", // ✅ Normal scaling like other pages
+        backgroundSize: "cover",
         backgroundPosition: "center",
-        backgroundAttachment: "scroll" // ✅ Prevents mobile zoom issues
+        backgroundAttachment: "fixed" 
       }} 
     >
-      <div className="relative z-10">
-        <Navbar />
+      <Navbar /> 
 
-        {/* 🎬 Hero Section - Height reduced to 50vh to remove the gap */}
-        <section className="relative h-[45vh] md:h-[50vh] w-full overflow-hidden flex items-end pb-6 px-8 md:px-20">
-          <video
-            autoPlay loop muted playsInline
-            className="absolute inset-0 w-full h-full object-cover brightness-90 z-[-1]"
-          >
-            <source src={mainVideo} type="video/mp4" />
-          </video>
-          
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-          >
-            {/* ✅ Reduced text size and simple font */}
-            <h1 
-                className="text-4xl md:text-5xl font-extrabold tracking-tight uppercase"
-                style={{ color: navbarBrown }}
+      <main className="relative z-10">
+        {/* 🎬 Hero Section - Kept exactly as your current code */}
+        <section className="px-4 md:px-16 mb-12">
+          <div className="relative w-full h-[75vh] md:h-[85vh] rounded-2xl overflow-hidden shadow-2xl border-4 border-white/10">
+            <video
+              autoPlay 
+              loop 
+              playsInline
+              className="w-full h-full object-cover"
             >
-              The Legacy
-            </h1>
-            <p 
-                className="font-bold tracking-wider uppercase mt-1 inline-block text-sm md:text-base"
-                style={{ color: navbarBrown }}
-            >
-              Moments from Epistemico
-            </p>
-          </motion.div>
+              <source src={mainVideo} type="video/mp4" />
+            </video>
+            
+            <div className="absolute bottom-0 left-0 w-full p-8 bg-gradient-to-t from-black/80 to-transparent">
+              <motion.div
+                initial={{ opacity: 0, x: -20 }}
+                animate={{ opacity: 1, x: 0 }}
+              >
+                <h1 className="text-4xl md:text-6xl font-extrabold tracking-tight uppercase text-white">
+                  The Legacy
+                </h1>
+                <p className="font-bold tracking-wider uppercase text-gray-300 text-sm md:text-base">
+                  Relive the Epistemico Moments
+                </p>
+              </motion.div>
+            </div>
+          </div>
         </section>
 
-        {/* 📸 Photo Sliders - Tightened spacing (space-y-10) */}
-        <div className="px-4 md:px-16 py-6 space-y-10 pb-20">
+        {/* 📸 Photo Sliders - Width extended for Group Photos */}
+        <div className="px-4 md:px-16 space-y-16 pb-24">
           
-          {/* Category: Highlights of Function */}
+          {/* Highlights */}
           <div className="group">
-            <h2 
-                className="text-2xl font-bold mb-4 flex items-center gap-4"
-                style={{ color: navbarBrown }}
-            >
-              <span className="w-1.5 h-6 rounded-sm inline-block" style={{ backgroundColor: navbarBrown }}></span>
+            <h2 className="text-3xl font-bold mb-6 flex items-center gap-4 drop-shadow-md" style={{ color: navbarBrown }}>
+              <span className="w-2 h-10 rounded-sm inline-block" style={{ backgroundColor: navbarBrown }}></span>
               Highlights of Function
             </h2>
             <Swiper
               modules={[Navigation, Pagination, Autoplay]}
-              spaceBetween={20}
-              slidesPerView={1.2}
+              spaceBetween={25} // Increased space
+              slidesPerView={1.1}
               navigation={true}
-              breakpoints={{ 640: { slidesPerView: 2.2 }, 1024: { slidesPerView: 4.2 } }}
+              breakpoints={{ 
+                640: { slidesPerView: 1.8 }, 
+                1024: { slidesPerView: 2.8 } // Fewer slides per view makes each card wider
+              }}
             >
               {highlights.map((img, idx) => (
                 <SwiperSlide key={idx}>
-                  <motion.div 
-                    whileHover={{ scale: 1.03 }} 
-                    className="rounded-lg overflow-hidden aspect-video border shadow-md bg-white/10"
-                    style={{ borderColor: `${navbarBrown}33` }}
-                  >
-                    <img src={img} alt={`Highlight ${idx + 1}`} className="w-full h-full object-cover" />
+                  {/* ✅ Changed aspect ratio to aspect-video (16:9) for wide group photos */}
+                  <motion.div whileHover={{ scale: 1.03 }} className="rounded-xl overflow-hidden aspect-video border-2 shadow-xl bg-white/20 backdrop-blur-sm" style={{ borderColor: `${navbarBrown}44` }}>
+                    <img src={img} alt="Highlight" className="w-full h-full object-cover" />
                   </motion.div>
                 </SwiperSlide>
               ))}
             </Swiper>
           </div>
 
-          {/* Category: Chief Guests */}
+          {/* Chief Guests */}
           <div className="group">
-            <h2 
-                className="text-2xl font-bold mb-4 flex items-center gap-4"
-                style={{ color: navbarBrown }}
-            >
-              <span className="w-1.5 h-6 rounded-sm inline-block" style={{ backgroundColor: navbarBrown }}></span>
+            <h2 className="text-3xl font-bold mb-6 flex items-center gap-4 drop-shadow-md" style={{ color: navbarBrown }}>
+              <span className="w-2 h-10 rounded-sm inline-block" style={{ backgroundColor: navbarBrown }}></span>
               Chief Guests
             </h2>
             <Swiper
               modules={[Navigation]}
-              spaceBetween={20}
-              slidesPerView={1.2}
+              spaceBetween={25}
+              slidesPerView={1.1}
               navigation={true}
-              breakpoints={{ 640: { slidesPerView: 2.2 }, 1024: { slidesPerView: 4.2 } }}
+              breakpoints={{ 
+                640: { slidesPerView: 1.8 }, 
+                1024: { slidesPerView: 2.8 } 
+              }}
             >
               {guests.map((img, idx) => (
                 <SwiperSlide key={idx}>
-                  <motion.div 
-                    whileHover={{ scale: 1.03 }} 
-                    className="rounded-lg overflow-hidden aspect-video border shadow-md bg-white/10"
-                    style={{ borderColor: `${navbarBrown}33` }}
-                  >
+                  <motion.div whileHover={{ scale: 1.03 }} className="rounded-xl overflow-hidden aspect-video border-2 shadow-xl bg-white/20 backdrop-blur-sm" style={{ borderColor: `${navbarBrown}44` }}>
                     <img src={img} alt="Chief Guest" className="w-full h-full object-cover" />
                   </motion.div>
                 </SwiperSlide>
@@ -130,29 +153,25 @@ const Gallery = () => {
             </Swiper>
           </div>
 
-          {/* Category: Awards */}
+          {/* Awards */}
           <div className="group">
-            <h2 
-                className="text-2xl font-bold mb-4 flex items-center gap-4"
-                style={{ color: navbarBrown }}
-            >
-              <span className="w-1.5 h-6 rounded-sm inline-block" style={{ backgroundColor: navbarBrown }}></span>
+            <h2 className="text-3xl font-bold mb-6 flex items-center gap-4 drop-shadow-md" style={{ color: navbarBrown }}>
+              <span className="w-2 h-10 rounded-sm inline-block" style={{ backgroundColor: navbarBrown }}></span>
               Awards
             </h2>
             <Swiper
               modules={[Navigation]}
-              spaceBetween={20}
-              slidesPerView={1.2}
+              spaceBetween={25}
+              slidesPerView={1.1}
               navigation={true}
-              breakpoints={{ 640: { slidesPerView: 2.2 }, 1024: { slidesPerView: 4.2 } }}
+              breakpoints={{ 
+                640: { slidesPerView: 1.8 }, 
+                1024: { slidesPerView: 2.8 } 
+              }}
             >
-              {awards.map((img, idx) => (
+              {awardsList.map((img, idx) => (
                 <SwiperSlide key={idx}>
-                  <motion.div 
-                    whileHover={{ scale: 1.03 }} 
-                    className="rounded-lg overflow-hidden aspect-video border shadow-md bg-white/10"
-                    style={{ borderColor: `${navbarBrown}33` }}
-                  >
+                  <motion.div whileHover={{ scale: 1.03 }} className="rounded-xl overflow-hidden aspect-video border-2 shadow-xl bg-white/20 backdrop-blur-sm" style={{ borderColor: `${navbarBrown}44` }}>
                     <img src={img} alt="Award" className="w-full h-full object-cover" />
                   </motion.div>
                 </SwiperSlide>
@@ -161,19 +180,20 @@ const Gallery = () => {
           </div>
 
         </div>
+      </main>
 
-        <Footer />
-      </div>
+      <Footer />
 
       <style jsx global>{`
         .swiper-button-next, .swiper-button-prev {
-          color: #4a2c2a !important;
-          background: rgba(255, 255, 255, 0.7);
-          width: 35px !important;
-          height: 35px !important;
+          color: white !important;
+          background: ${navbarBrown};
+          width: 50px !important;
+          height: 50px !important;
           border-radius: 50%;
+          box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3);
         }
-        .swiper-button-next:after, .swiper-button-prev:after { font-size: 0.8rem !important; }
+        .swiper-button-next:after, .swiper-button-prev:after { font-size: 1.2rem !important; font-weight: bold; }
       `}</style>
     </div>
   );
