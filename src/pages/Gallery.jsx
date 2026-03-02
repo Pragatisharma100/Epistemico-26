@@ -97,8 +97,8 @@ import cg5 from "../assets/gallery-highlight/cg5.jpg";
 
 // ✅ 3. Awards
 import award1 from "../assets/gallery-highlight/award1.jpg";
-import award2 from "../assets/gallery-highlight/award2.JPG"; 
-import award3 from "../assets/gallery-highlight/award3.JPG";
+import award2 from "../assets/gallery-highlight/award2.jpg"; 
+import award3 from "../assets/gallery-highlight/award3.jpg";
 import award4 from "../assets/gallery-highlight/award4.jpg";
 import award5 from "../assets/gallery-highlight/award5.jpg";
 
