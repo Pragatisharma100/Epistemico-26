@@ -44,7 +44,7 @@ export default function Footer() {
     >
       {/* Content wrapper with z-index to stay above the background image */}
       <div className="relative z-10 px-6">
-        <p className="font-bold text-brownDark">www.epistemico.com</p>
+        <p className="font-bold text-brownDark">epistemico-26.vercel.app</p>
         
         <div className="mt-4 flex items-center justify-center gap-6">
           {socialLinks.map((social, index) => (
