@@ -1,12 +1,66 @@
-import React from "react";
+import React, { useRef } from "react";
 import { motion } from "framer-motion";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Pagination, Autoplay } from "swiper/modules";
 
-// Swiper styles
-import "swiper/css";
-import "swiper/css/navigation";
-import "swiper/css/pagination";
+// helper slider component using native overflow scrolling
+const ImageSlider = ({ images, navbarBrown, label }) => {
+  const containerRef = useRef(null);
+  const scrollBy = (amount) => {
+    if (containerRef.current) {
+      containerRef.current.scrollBy({ left: amount, behavior: "smooth" });
+    }
+  };
+  return (
+    <div className="group">
+      <h2
+        className="text-3xl font-bold mb-6 flex items-center gap-4 drop-shadow-md"
+        style={{ color: navbarBrown }}
+      >
+        <span
+          className="w-2 h-10 rounded-sm inline-block"
+          style={{ backgroundColor: navbarBrown }}
+        ></span>
+        {label}
+      </h2>
+      <div className="relative">
+        <div
+          ref={containerRef}
+          className="flex space-x-4 overflow-x-auto snap-x snap-mandatory scroll-smooth py-2"
+        >
+          {images.map((img, idx) => (
+            <div
+              key={idx}
+              className="snap-start flex-shrink-0 w-[80vw] md:w-[40vw] lg:w-[30vw]"
+            >
+              <motion.div
+                whileHover={{ scale: 1.03 }}
+                className="rounded-xl overflow-hidden aspect-video border-2 shadow-xl bg-white/20 backdrop-blur-sm"
+                style={{ borderColor: `${navbarBrown}44` }}
+              >
+                <img
+                  src={img}
+                  alt={label}
+                  className="w-full h-full object-cover"
+                />
+              </motion.div>
+            </div>
+          ))}
+        </div>
+        <button
+          onClick={() => scrollBy(-300)}
+          className="absolute left-0 top-1/2 transform -translate-y-1/2 p-2 bg-white/30 rounded-full"
+        >
+          ‹
+        </button>
+        <button
+          onClick={() => scrollBy(300)}
+          className="absolute right-0 top-1/2 transform -translate-y-1/2 p-2 bg-white/30 rounded-full"
+        >
+          ›
+        </button>
+      </div>
+    </div>
+  );
+};
 
 // Layout components
 import Navbar from "../components/Navbar";
@@ -101,100 +155,32 @@ const Gallery = () => {
         <div className="px-4 md:px-16 space-y-16 pb-24">
           
           {/* Highlights */}
-          <div className="group">
-            <h2 className="text-3xl font-bold mb-6 flex items-center gap-4 drop-shadow-md" style={{ color: navbarBrown }}>
-              <span className="w-2 h-10 rounded-sm inline-block" style={{ backgroundColor: navbarBrown }}></span>
-              Highlights of Function
-            </h2>
-            <Swiper
-              modules={[Navigation, Pagination, Autoplay]}
-              spaceBetween={25} // Increased space
-              slidesPerView={1.1}
-              navigation={true}
-              breakpoints={{ 
-                640: { slidesPerView: 1.8 }, 
-                1024: { slidesPerView: 2.8 } // Fewer slides per view makes each card wider
-              }}
-            >
-              {highlights.map((img, idx) => (
-                <SwiperSlide key={idx}>
-                  {/* ✅ Changed aspect ratio to aspect-video (16:9) for wide group photos */}
-                  <motion.div whileHover={{ scale: 1.03 }} className="rounded-xl overflow-hidden aspect-video border-2 shadow-xl bg-white/20 backdrop-blur-sm" style={{ borderColor: `${navbarBrown}44` }}>
-                    <img src={img} alt="Highlight" className="w-full h-full object-cover" />
-                  </motion.div>
-                </SwiperSlide>
-              ))}
-            </Swiper>
-          </div>
+          <ImageSlider
+            images={highlights}
+            navbarBrown={navbarBrown}
+            label="Highlights of Function"
+          />
 
           {/* Chief Guests */}
-          <div className="group">
-            <h2 className="text-3xl font-bold mb-6 flex items-center gap-4 drop-shadow-md" style={{ color: navbarBrown }}>
-              <span className="w-2 h-10 rounded-sm inline-block" style={{ backgroundColor: navbarBrown }}></span>
-              Chief Guests
-            </h2>
-            <Swiper
-              modules={[Navigation]}
-              spaceBetween={25}
-              slidesPerView={1.1}
-              navigation={true}
-              breakpoints={{ 
-                640: { slidesPerView: 1.8 }, 
-                1024: { slidesPerView: 2.8 } 
-              }}
-            >
-              {guests.map((img, idx) => (
-                <SwiperSlide key={idx}>
-                  <motion.div whileHover={{ scale: 1.03 }} className="rounded-xl overflow-hidden aspect-video border-2 shadow-xl bg-white/20 backdrop-blur-sm" style={{ borderColor: `${navbarBrown}44` }}>
-                    <img src={img} alt="Chief Guest" className="w-full h-full object-cover" />
-                  </motion.div>
-                </SwiperSlide>
-              ))}
-            </Swiper>
-          </div>
+          <ImageSlider
+            images={guests}
+            navbarBrown={navbarBrown}
+            label="Chief Guests"
+          />
 
           {/* Awards */}
-          <div className="group">
-            <h2 className="text-3xl font-bold mb-6 flex items-center gap-4 drop-shadow-md" style={{ color: navbarBrown }}>
-              <span className="w-2 h-10 rounded-sm inline-block" style={{ backgroundColor: navbarBrown }}></span>
-              Awards
-            </h2>
-            <Swiper
-              modules={[Navigation]}
-              spaceBetween={25}
-              slidesPerView={1.1}
-              navigation={true}
-              breakpoints={{ 
-                640: { slidesPerView: 1.8 }, 
-                1024: { slidesPerView: 2.8 } 
-              }}
-            >
-              {awardsList.map((img, idx) => (
-                <SwiperSlide key={idx}>
-                  <motion.div whileHover={{ scale: 1.03 }} className="rounded-xl overflow-hidden aspect-video border-2 shadow-xl bg-white/20 backdrop-blur-sm" style={{ borderColor: `${navbarBrown}44` }}>
-                    <img src={img} alt="Award" className="w-full h-full object-cover" />
-                  </motion.div>
-                </SwiperSlide>
-              ))}
-            </Swiper>
-          </div>
+          <ImageSlider
+            images={awardsList}
+            navbarBrown={navbarBrown}
+            label="Awards"
+          />
 
         </div>
       </main>
 
       <Footer />
 
-      <style jsx global>{`
-        .swiper-button-next, .swiper-button-prev {
-          color: white !important;
-          background: ${navbarBrown};
-          width: 50px !important;
-          height: 50px !important;
-          border-radius: 50%;
-          box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3);
-        }
-        .swiper-button-next:after, .swiper-button-prev:after { font-size: 1.2rem !important; font-weight: bold; }
-      `}</style>
+
     </div>
   );
 };
