@@ -24,12 +24,14 @@ Epistemico — एकंकुटुम्बं इवविश्वं उत
                  Let us celebrate the world as one family.`;
 
   return (
-    <section className="glass-card mt-10 rounded-3xl p-8 text-center hover:scale-[1.02] transition-transform duration-300 max-w-4xl mx-auto shadow-lg">
-      <h2 className="text-3xl font-extrabold text-brownDark font-samarkan mb-6">
-        Theme Vasudhaiva Kutumbakam
-      </h2>
+    <section className="px-4 md:px-8 py-12">
+      <div className="max-w-6xl mx-auto">
+        <div className="rounded-3xl p-8 md:p-10 text-center hover:scale-[1.02] transition-all duration-300 shadow-lg hover:shadow-xl relative backdrop-blur-md bg-gradient-to-br from-amber-50/55 to-orange-50/55 border-2 border-[#a9572f]/30">
+          <h2 className="text-3xl font-extrabold text-brownDark font-samarkan mb-6">
+            Theme Vasudhaiva Kutumbakam
+          </h2>
       
-      <div className="text-md text-brownMid leading-relaxed whitespace-pre-line text-center">
+      <div className="text-md text-brownMid leading-relaxed whitespace-pre-line text-center font-medium">
         {/* line-clamp-3 shows only first 3 lines initially. 
             When expanded, we remove the clamp to show the full text. */}
         <p className={isExpanded ? "" : "line-clamp-3"}>
@@ -43,6 +45,8 @@ Epistemico — एकंकुटुम्बं इवविश्वं उत
       >
         {isExpanded ? "Show Less" : "Learn More"}
       </button>
+        </div>
+      </div>
     </section>
   );
 }

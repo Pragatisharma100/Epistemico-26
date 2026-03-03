@@ -17,108 +17,152 @@ Organized through four core domains—Technical, Cultural, Innovation, and Liter
 across regions and continues to inspire lasting impact.`
 };
 
-// 🔹 Domains Config
-const domains = [
-  {
-    icon: Zap,
-    title: "Technical",
-    description: "Competitions, coding battles, robotics & problem-solving arenas."
-  },
-  {
-    icon: Users,
-    title: "Cultural",
-    description: "Performances, art, music, dance & creative showcases."
-  },
-  {
-    icon: Lightbulb,
-    title: "Innovation",
-    description: "Startup pitches, prototype demos & visionary concepts."
-  },
-  {
-    icon: BookOpen,
-    title: "Literary",
-    description: "Debates, poetry, storytelling & intellectual forums."
-  }
-];
 
 export default function About() {
   const [isExpanded, setIsExpanded] = useState(false);
+  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
 
   const container = {
-    hidden: {},
+    hidden: { opacity: 0 },
     show: {
-      transition: { staggerChildren: 0.15 }
+      opacity: 1,
+      transition: { staggerChildren: 0.15, delayChildren: 0.2 }
     }
   };
 
   const fadeUp = {
-    hidden: { opacity: 0, y: 25 },
-    show: { opacity: 1, y: 0, transition: { duration: 0.5 } }
+    hidden: { opacity: 0, y: 30 },
+    show: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.6, ease: "easeOut" }
+    }
+  };
+
+  const iconBounce = {
+    hidden: { scale: 0 },
+    show: {
+      scale: 1,
+      transition: { type: "spring", stiffness: 100, damping: 15 }
+    }
+  };
+
+  const handleMouseMove = (e) => {
+    const rect = e.currentTarget.getBoundingClientRect();
+    setMousePosition({
+      x: (e.clientX - rect.left - rect.width / 2) * 0.02,
+      y: (e.clientY - rect.top - rect.height / 2) * 0.02
+    });
+  };
+
+  const handleMouseLeave = () => {
+    setMousePosition({ x: 0, y: 0 });
   };
 
   return (
-    <section className="mt-10 px-4">
+    <section className="px-4 md:px-8 py-12">
+      <div className="max-w-6xl mx-auto">
 
-      {/* About Card */}
+      {/* About Card - Enhanced with 3D and Glassmorphism */}
       <motion.div
-        initial={{ opacity: 0, y: 30 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6 }}
-        className="glass-card rounded-3xl p-6 text-center max-w-3xl mx-auto hover:scale-[1.02] transition-transform duration-300"
+        initial={{ opacity: 0, y: 60, rotateX: 20 }}
+        whileInView={{ opacity: 1, y: 0, rotateX: 0 }}
+        transition={{ duration: 0.8, ease: "easeOut" }}
+        viewport={{ once: false }}
+        onMouseMove={handleMouseMove}
+        onMouseLeave={handleMouseLeave}
+        style={{
+          rotateX: mousePosition.y,
+          rotateY: mousePosition.x,
+          perspective: "1200px"
+        }}
+        className="relative max-w-3xl mx-auto rounded-3xl overflow-hidden group"
       >
-        <h2 className="text-2xl font-extrabold text-brownDark font-samarkan">
-          {aboutData.title}
-        </h2>
+        {/* Background gradient layers for depth */}
+        <div className="absolute inset-0 bg-gradient-to-br from-amber-50 via-orange-50 to-amber-50 opacity-90 group-hover:opacity-100 transition-opacity duration-500"></div>
+        
+        {/* Glowing border effect */}
+        <motion.div
+          className="absolute inset-0 rounded-3xl bg-gradient-to-r from-[#a9572f] via-[#c87a4a] to-[#a9572f] opacity-0 group-hover:opacity-20 transition-opacity duration-500 blur-xl"
+          animate={{
+            boxShadow: [
+              "0 0 20px rgba(169,87,47,0.3)",
+              "0 0 40px rgba(169,87,47,0.5)",
+              "0 0 20px rgba(169,87,47,0.3)"
+            ]
+          }}
+          transition={{ duration: 3, repeat: Infinity }}
+        ></motion.div>
 
-        <div className="mt-4 text-sm text-brownMid leading-relaxed">
-          <p className={isExpanded ? "whitespace-pre-line" : "line-clamp-3"}>
-            {aboutData.content}
-          </p>
-        </div>
-
-        <motion.button
-          whileHover={{ scale: 1.05 }}
-          whileTap={{ scale: 0.95 }}
-          onClick={() => setIsExpanded(!isExpanded)}
-          className="mt-6 px-7 py-2 rounded-full bg-[#a9572f] text-white font-bold transition"
+        {/* Content wrapper with glass effect */}
+        <motion.div
+          className="relative backdrop-blur-md bg-gradient-to-br from-amber-50/55 to-orange-50/55 border-2 border-[#a9572f]/30 rounded-3xl p-8 md:p-10 shadow-lg hover:shadow-xl transition-all duration-500"
+          whileHover={{ scale: 1.02, y: -5 }}
         >
-          {isExpanded ? "Show Less" : "Learn More"}
-        </motion.button>
-      </motion.div>
+          {/* Decorative elements */}
+          <motion.div
+            className="absolute top-0 right-0 w-40 h-40 bg-[#a9572f]/10 rounded-full filter blur-3xl"
+            animate={{ y: [0, 20, 0], x: [0, 10, 0] }}
+            transition={{ duration: 6, repeat: Infinity }}
+          ></motion.div>
 
-      {/* Domains Section */}
-      <motion.div
-        variants={container}
-        initial="hidden"
-        whileInView="show"
-        className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-12 max-w-6xl mx-auto"
-      >
-        {domains.map((domain, index) => {
-          const Icon = domain.icon;
+          <motion.div
+            className="absolute bottom-0 left-0 w-32 h-32 bg-[#7a4a2c]/10 rounded-full filter blur-3xl"
+            animate={{ y: [0, -20, 0], x: [0, -10, 0] }}
+            transition={{ duration: 8, repeat: Infinity }}
+          ></motion.div>
 
-          return (
-            <motion.div
-              key={index}
-              variants={fadeUp}
-              whileHover={{ y: -6, scale: 1.03 }}
-              className="glass-card rounded-2xl p-6 text-center border border-[#a9572f]/30 hover:border-[#a9572f] transition-all duration-300"
+          {/* Content - relative z-index for layering */}
+          <div className="relative z-10">
+            <motion.h2
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.1 }}
+              viewport={{ once: false }}
+              className="text-3xl md:text-4xl font-extrabold font-samarkan mb-2 text-brownDark"
             >
-              <div className="w-14 h-14 mx-auto flex items-center justify-center rounded-full bg-[#a9572f]/10 mb-4">
-                <Icon className="w-7 h-7 text-[#a9572f]" />
-              </div>
+              {aboutData.title}
+            </motion.h2>
 
-              <h4 className="text-lg font-bold text-brownDark">
-                {domain.title}
-              </h4>
+            {/* Decorative line */}
+            <motion.div
+              initial={{ scaleX: 0 }}
+              whileInView={{ scaleX: 1 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              viewport={{ once: false }}
+              className="h-1 w-16 bg-gradient-to-r from-[#a9572f] to-transparent rounded-full mb-6 origin-left"
+            ></motion.div>
 
-              <p className="text-sm text-brownMid mt-2">
-                {domain.description}
+            <motion.div
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              transition={{ duration: 0.6, delay: 0.3 }}
+              viewport={{ once: false }}
+              className="mt-4 text-sm md:text-base text-brownMid leading-relaxed font-medium"
+            >
+              <p className={isExpanded ? "whitespace-pre-line" : "line-clamp-3"}>
+                {aboutData.content}
               </p>
             </motion.div>
-          );
-        })}
-      </motion.div>
 
+            <motion.button
+              whileHover={{ scale: 1.1, boxShadow: "0 15px 40px rgba(169,87,47,0.5)" }}
+              whileTap={{ scale: 0.95 }}
+              onClick={() => setIsExpanded(!isExpanded)}
+              className="mt-8 px-8 py-3 rounded-full bg-gradient-to-r from-[#a9572f] to-[#c87a4a] text-white font-bold shadow-lg hover:shadow-xl transition-all duration-300 relative overflow-hidden group/btn"
+            >
+              <motion.span
+                className="absolute inset-0 bg-gradient-to-r from-[#7a4a2c] to-[#a9572f] opacity-0 group-hover/btn:opacity-100 transition-opacity"
+                layoutId="btn-bg"
+              ></motion.span>
+              <span className="relative z-10">
+                {isExpanded ? "Show Less" : "Learn More"}
+              </span>
+            </motion.button>
+          </div>
+        </motion.div>
+      </motion.div>
+      </div>
     </section>
   );
 }
