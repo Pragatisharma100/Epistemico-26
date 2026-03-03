@@ -61,7 +61,7 @@ export default function Footer() {
         </div>
 
         <p className="mt-4 text-[10px] text-brownMid">
-          © 2026 Epistemico Cultural Fest • All rights reserved
+          © 2026 Epistemico Techno-Cultural Fest • All rights reserved
         </p>
       </div>
     </footer>
