@@ -9,6 +9,7 @@ const technicalEvents = [
     shortTitle: "Kōde Keishō",
     category: "Relay Coding",
     image: kodeKeisho,
+    registrationLink:"https://forms.gle/LcbMwnb34b7wkcsi9",
     overview:
       "Team-based relay coding competition testing technical skills, adaptability, strategic thinking, and readable code. Members work sequentially on a single problem with no communication during execution.",
     eventDetails: {
@@ -61,6 +62,7 @@ const technicalEvents = [
     shortTitle: "TechTrek",
     category: "Treasure Hunt",
     image: techTrek,
+    registrationLink:"https://forms.gle/EcyG7PnerqpzAdqZ6",
     overview:
       "Campus-wide technical treasure hunt combining logical reasoning, programming concepts, and digital puzzles across physical locations and web-based clues.",
     eventDetails: {
@@ -99,6 +101,7 @@ const technicalEvents = [
     shortTitle: "BattleDomeX",
     category: "eSports",
     image: battleDome,
+    registrationLink:"https://forms.gle/rzQcWCwnh95sLWpL9",
     overview:
       "Competitive eSports event featuring BGMI and Free Fire with knockout rounds, live commentary and leaderboards creating a pro gaming atmosphere.",
     eventDetails: {
@@ -128,6 +131,7 @@ const technicalEvents = [
     shortTitle: "AI Cineverse",
     category: "Digital / AI",
     image: aiCineverseImg,
+    registrationLink:"https://forms.gle/tyA8ybC2EMQ2MM2B9",
     overview:
       "Individual or duo competition to produce an original AI-generated short film (visuals + narration). Focus on creativity, ethical AI use, and storytelling.",
     eventDetails: {
