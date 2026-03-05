@@ -1,10 +1,14 @@
+import kbcImg from "../assets/kbc.jpg";
+import auctionImg from "../assets/auction.jpg";
+import mafiaGameImg from "../assets/mafia game.jpg";
+import blindInkImg from "../assets/blink ink.jpg";
 const literaryEvents = [
   {
     id: 1,
     title: "KBC — The Big Quiz Show",
     shortTitle: "KBC Quiz",
     category: "Quiz",
-    image: "https://images.unsplash.com/photo-1558981359-6fb3b7e0f60b?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3&s=aa1122bb3344cc55dd66ee77ff889900",
+    image: kbcImg,
     overview:
       "The KBC Quiz Challenge is an interactive, team-based quiz inspired by popular knowledge formats, testing general knowledge, logical reasoning, and decision-making.",
     numberOfTeams: "10 Teams",
@@ -31,7 +35,7 @@ const literaryEvents = [
     title: "BID THE BARD — The Literary Auction",
     shortTitle: "Bid The Bard",
     category: "Multi-round Literary",
-    image: "https://images.unsplash.com/photo-1516979187457-637abb4f9353?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3&s=bb2233cc4455dd66ee77ff8899001122",
+    image: auctionImg,
     overview:
       "A competitive literary event assessing debating skills, language proficiency, spontaneity, and creative expression through Debate, Spell Bee and Rapid Fire rounds.",
     numberOfTeams: "10 Teams",
@@ -61,7 +65,7 @@ const literaryEvents = [
     title: "THE LIE DETECTOR — Mafia Game",
     shortTitle: "The Lie Detector",
     category: "Interactive Game",
-    image: "https://images.unsplash.com/photo-1504198453319-5ce911bafcde?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3&s=cc3344dd5566ee77ff8899001122aa33",
+    image: mafiaGameImg,
     overview:
       "A strategic individual participation game testing observation, deduction and communication skills where participants identify an impostor (Mafia) among similar clue-bearers.",
     participation: "Individual entries",
@@ -82,7 +86,7 @@ const literaryEvents = [
     title: "BLIND INK ODYSSEY — Literary Quiz & Creative Task",
     shortTitle: "Blind Ink Odyssey",
     category: "Quiz + Creative",
-    image: "https://images.unsplash.com/photo-1512427691650-1bb0f5d0f1b5?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3&s=dd4455ee66778899aa0011223344bb55",
+    image: blindInkImg,
     overview:
       "Two-round event assessing English grammar, literary knowledge and creative performance with an MCQ quiz followed by a blindfolded creative task.",
     participation: "Individual entries",
