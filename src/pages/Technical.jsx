@@ -9,9 +9,9 @@ import technicalEvents from "../data/technicalEvents";
 export default function Technical() {
   const [selectedEvent, setSelectedEvent] = useState(null);
   const [showRegistration, setShowRegistration] = useState(false);
-  const navigate = useNavigate();
-
   const [googleFormLink, setGoogleFormLink] = useState("");
+
+  const navigate = useNavigate();
 
   return (
     <div className="min-h-screen">
@@ -51,7 +51,11 @@ export default function Technical() {
             </div>
 
             <button
-              onClick={() => setShowRegistration(true)}
+              onClick={() => {
+                setSelectedEvent("Technical Events");
+                setGoogleFormLink("https://forms.gle/YOUR_MAIN_FORM");
+                setShowRegistration(true);
+              }}
               className="mt-2 md:mt-0 bg-white text-[#a9572f] px-6 py-2 rounded-full font-bold hover:bg-orange-50 transition-all"
             >
               Register Here →
@@ -64,6 +68,7 @@ export default function Technical() {
         <section className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
 
           {technicalEvents.map((event) => (
+
             <div
               key={event.id}
               className="bg-white rounded-xl overflow-hidden shadow-lg flex flex-col"
@@ -120,11 +125,12 @@ export default function Technical() {
               </div>
 
             </div>
+
           ))}
 
         </section>
 
-        {/* Modal */}
+        {/* Registration Modal */}
         <RegistrationModal
           open={showRegistration}
           onClose={() => setShowRegistration(false)}
