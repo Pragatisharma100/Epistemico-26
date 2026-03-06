@@ -12,6 +12,7 @@ const culturalEvents = [
     shortTitle: "Baila Conmigo",
     category: "Group Dance",
     image: bailaConmigo,
+    registrationLink:"https://forms.gle/35QvGVCZAPzWzneV6",
     overview:
       "BAILA CONMIGO is a vibrant group dance competition where energy, synchronization, and creativity come alive on stage.",
     maxTeams: "15 Teams",
@@ -37,6 +38,7 @@ const culturalEvents = [
     shortTitle: "Echo2",
     category: "Duet Dance",
     image: echo2,
+    registrationLink:"https://forms.gle/Asbd8DbvgtSkjuFv5",
     overview:
       "Echo2 celebrates teamwork, coordination, and chemistry between two dancers judged on synchronization and storytelling.",
     maxTeams: "10 Teams",
@@ -62,6 +64,7 @@ const culturalEvents = [
     shortTitle: "Footloose",
     category: "Solo Dance",
     image: soloDance,
+    registrationLink:"https://forms.gle/rbbF23b5gwxHkn157",
     overview:
       "Footloose brings individual talent to the spotlight, allowing solo dancers to express personal style, rhythm, and passion.",
     totalParticipants: "15",
@@ -86,6 +89,7 @@ const culturalEvents = [
     shortTitle: "Sangam",
     category: "Group Singing",
     image: groupSinging,
+    registrationLink:"https://forms.gle/TQk3xPsuB2CPFzFP9",
     overview:
       "Sangam brings together group singers to perform songs evaluated on harmony, pitch, and expression.",
     maxTeams: "10 Teams",
@@ -111,6 +115,7 @@ const culturalEvents = [
     shortTitle: "Euphony",
     category: "Solo Singing",
     image: soloSinging,
+    registrationLink:"https://forms.gle/wzpBBrCbCyE15qhW6",
     overview:
       "Euphony is a solo singing competition celebrating vocal talent, modulation, and audience connection.",
     totalParticipants: "10",
@@ -135,6 +140,7 @@ const culturalEvents = [
     shortTitle: "Met-Gala",
     category: "Fashion Walk",
     image: metGala,
+    registrationLink:"https://forms.gle/dZx5jiqx6ojJ2Bt96",
     overview:
       "MET-GALA celebrates style, confidence and creative presentation on the ramp, focusing on elegance and innovation.",
     maxTeams: "12 Teams",
@@ -162,6 +168,7 @@ const culturalEvents = [
     shortTitle: "Haute Couture",
     category: "Styling",
     image: hauteCouture,
+    registrationLink:"https://forms.gle/5jpNpDpDcYvRNo3z5",
     overview:
       "HAUTE COUTURE is a styling event celebrating imagination, confidence, and visual storytelling where teams create looks inspired by assigned regions and twist cards.",
     maxTeams: "15 Teams",
