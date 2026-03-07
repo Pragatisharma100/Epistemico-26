@@ -9,6 +9,7 @@ const literaryEvents = [
     shortTitle: "KBC Quiz",
     category: "Quiz",
     image: kbcImg,
+    registrationLink:"https://forms.gle/6FVekSSjs7jkCsQw7",
     overview:
       "The KBC Quiz Challenge is an interactive, team-based quiz inspired by popular knowledge formats, testing general knowledge, logical reasoning, and decision-making.",
     numberOfTeams: "10 Teams",
@@ -36,6 +37,7 @@ const literaryEvents = [
     shortTitle: "Bid The Bard",
     category: "Multi-round Literary",
     image: auctionImg,
+    registrationLink:"https://forms.gle/rvYVCCXw3fdE4pkP8",
     overview:
       "A competitive literary event assessing debating skills, language proficiency, spontaneity, and creative expression through Debate, Spell Bee and Rapid Fire rounds.",
     numberOfTeams: "10 Teams",
@@ -66,6 +68,7 @@ const literaryEvents = [
     shortTitle: "The Lie Detector",
     category: "Interactive Game",
     image: mafiaGameImg,
+    registrationLink:"https://forms.gle/hexQQcZWfrozJ9DS9",
     overview:
       "A strategic individual participation game testing observation, deduction and communication skills where participants identify an impostor (Mafia) among similar clue-bearers.",
     participation: "Individual entries",
@@ -87,6 +90,7 @@ const literaryEvents = [
     shortTitle: "Blind Ink Odyssey",
     category: "Quiz + Creative",
     image: blindInkImg,
+    registrationLink:"https://forms.gle/FQo8b3Q9V7Q6ojTf7",
     overview:
       "Two-round event assessing English grammar, literary knowledge and creative performance with an MCQ quiz followed by a blindfolded creative task.",
     participation: "Individual entries",
