@@ -63,7 +63,7 @@ export default function Navbar() {
         </div>
 
         {/* Action Button - Styles from Code 2 */}
-        <div className="hidden md:block">
+        {/* <div className="hidden md:block">
           <Link to="/passes">
             <motion.button
               whileHover={{ scale: 1.05 }}
@@ -73,7 +73,7 @@ export default function Navbar() {
               Book Passes
             </motion.button>
           </Link>
-        </div>
+        </div>*/}
 
         {/* MOBILE HAMBURGER - From Code 1 */}
         <div className="md:hidden flex items-center">
@@ -110,11 +110,11 @@ export default function Navbar() {
                   {link.name}
                 </Link>
               ))}
-              <Link to="/passes" onClick={() => setMenuOpen(false)}>
+              {/*  <Link to="/passes" onClick={() => setMenuOpen(false)}>
                 <button className="bg-brownDark text-white px-8 py-3 rounded-full text-xs font-bold uppercase tracking-widest shadow-md">
                   Book Passes
                 </button>
-              </Link>
+              </Link> */}
             </div>
           </motion.div>
         )}
