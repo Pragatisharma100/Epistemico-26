@@ -8,7 +8,7 @@ export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   const navLinks = [
-    { name: "Home", path: "/" },
+    { name: "Home", path: "/home" },
     { name: "Events", path: "/events" },
     { name: "Gallery", path: "/gallery" },
     { name: "Team", path: "/team" },
