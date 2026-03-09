@@ -1,0 +1,201 @@
+import bailaConmigo from "../assets/bailaConmigo.jpg";
+import echo2 from "../assets/echo2.jpg";
+import soloDance from "../assets/solodance.png";
+import groupSinging from "../assets/group singing.jpg";
+import soloSinging from "../assets/solosinging.jpg";
+import metGala from "../assets/metgala.jpg";
+import hauteCouture from "../assets/hautecouture.jpg";
+const culturalEvents = [
+  {
+    id: 1,
+    title: "GROUP DANCE - BAILA CONMIGO",
+    shortTitle: "Baila Conmigo",
+    category: "Group Dance",
+    image: bailaConmigo,
+    registrationLink:"https://forms.gle/35QvGVCZAPzWzneV6",
+    overview:
+      "BAILA CONMIGO is a vibrant group dance competition where energy, synchronization, and creativity come alive on stage.",
+    maxTeams: "15 Teams",
+    teamSize: "8–12 Members",
+    duration: "6-8 minutes per team",
+    venue: "Auditorium",
+    format: ["Performance Round: Judges observe synchronization, musicality, and storytelling.", "Judging: Creativity, coordination, and stage presence."],
+    rules: [
+      "Any dance style allowed; content must be decent and appropriate.",
+      "Audio track and visuals (if any) must be submitted 1 week prior to the event.",
+      "Use of crackers, fire, smoke, colour powders, water, or any liquid substances is strictly prohibited.",
+      "Props allowed but must be safe and arranged by participants.",
+      "Teams must report at least 30 minutes before scheduled time.",
+      "Judges’ decision is final and binding.",
+    ],
+    winningCriteria: ["Best coordination and harmony", "Creativity and originality of choreography"],
+    resources: "Stage, sound system, lighting, green room",
+  },
+
+  {
+    id: 2,
+    title: "DUET DANCE - ECHO2",
+    shortTitle: "Echo2",
+    category: "Duet Dance",
+    image: echo2,
+    registrationLink:"https://forms.gle/Asbd8DbvgtSkjuFv5",
+    overview:
+      "Echo2 celebrates teamwork, coordination, and chemistry between two dancers judged on synchronization and storytelling.",
+    maxTeams: "10 Teams",
+    teamSize: "2 Members",
+    duration: "3 minutes per performance",
+    venue: "Auditorium",
+    format: ["Performance Round: Judges observe synchronization, musicality, and storytelling.", "Judging: Creativity, coordination, and stage presence."],
+    rules: [
+      "Any dance style allowed; performance must be decent and appropriate.",
+      "Audio track and visuals must be submitted 1 week prior.",
+      "Use of hazardous substances is prohibited.",
+      "Props allowed but must be safe and handled by participants.",
+      "Participants must report at least 30 minutes before scheduled time.",
+      "Judges’ decision is final and binding.",
+    ],
+    winningCriteria: ["Best coordination and harmony", "Creativity and originality of choreography"],
+    resources: "Stage, sound system, lighting",
+  },
+
+  {
+    id: 3,
+    title: "SOLO DANCE - FOOTLOOSE",
+    shortTitle: "Footloose",
+    category: "Solo Dance",
+    image: soloDance,
+    registrationLink:"https://forms.gle/rbbF23b5gwxHkn157",
+    overview:
+      "Footloose brings individual talent to the spotlight, allowing solo dancers to express personal style, rhythm, and passion.",
+    totalParticipants: "15",
+    duration: "3 minutes per performance",
+    venue: "Auditorium",
+    format: ["Performance: Participants perform their chosen dance style.", "Judging: Technique, creativity, expression, stage presence."],
+    rules: [
+      "Any dance style allowed; performance must be decent and appropriate.",
+      "Audio track and visuals must be submitted 1 week prior.",
+      "Use of hazardous substances is prohibited.",
+      "Props allowed if safe and managed by participant.",
+      "Participants must report at least 30 minutes before scheduled time.",
+      "Judges’ decision is final and binding.",
+    ],
+    winningCriteria: ["Overall performance and emotional connection", "Precision, rhythm, originality"],
+    resources: "Stage, sound system, lighting",
+  },
+
+  {
+    id: 4,
+    title: "GROUP SINGING - SANGAM",
+    shortTitle: "Sangam",
+    category: "Group Singing",
+    image: groupSinging,
+    registrationLink:"https://forms.gle/TQk3xPsuB2CPFzFP9",
+    overview:
+      "Sangam brings together group singers to perform songs evaluated on harmony, pitch, and expression.",
+    maxTeams: "10 Teams",
+    teamSize: "6-8 Members",
+    duration: "5-7 minutes per group",
+    venue: "Auditorium",
+    format: ["Performance: Judges evaluate pitch, rhythm, harmony, audience engagement."],
+    rules: [
+      "Any song/genre allowed; lyrics must be decent and appropriate.",
+      "Pre-recorded karaoke/instrumental track (if used) must be submitted 1 week prior.",
+      "Use of hazardous substances is prohibited.",
+      "Live instruments allowed only with prior permission.",
+      "Groups must report at least 30 minutes before scheduled time.",
+      "Judges’ decision is final and binding.",
+    ],
+    winningCriteria: ["Harmony, pitch, expression", "Audience engagement"],
+    resources: "Stage, microphones, sound system, instruments (with permission)",
+  },
+
+  {
+    id: 5,
+    title: "SOLO SINGING - EUPHONY",
+    shortTitle: "Euphony",
+    category: "Solo Singing",
+    image: soloSinging,
+    registrationLink:"https://forms.gle/wzpBBrCbCyE15qhW6",
+    overview:
+      "Euphony is a solo singing competition celebrating vocal talent, modulation, and audience connection.",
+    totalParticipants: "10",
+    duration: "Max 4 minutes",
+    venue: "Auditorium",
+    format: ["Performance: Each soloist performs a song of choice.", "Judging: Vocal quality, expression, originality."],
+    rules: [
+      "Any song/genre allowed; lyrics must be decent and appropriate.",
+      "Pre-recorded track must be submitted 1 week prior if used.",
+      "Use of hazardous substances is prohibited.",
+      "Live instruments allowed only with prior permission.",
+      "Participants must report at least 30 minutes before scheduled time.",
+      "Judges’ decision is final and binding.",
+    ],
+    winningCriteria: ["Vocal precision and emotional expression", "Creativity and uniqueness"],
+    resources: "Stage, microphones, sound system",
+  },
+
+  {
+    id: 6,
+    title: "FASHION WALK - MET-GALA (THE GWECA EDITION)",
+    shortTitle: "Met-Gala",
+    category: "Fashion Walk",
+    image: metGala,
+    registrationLink:"https://forms.gle/dZx5jiqx6ojJ2Bt96",
+    overview:
+      "MET-GALA celebrates style, confidence and creative presentation on the ramp, focusing on elegance and innovation.",
+    maxTeams: "12 Teams",
+    teamSize: "8-12 Members",
+    duration: "8-10 minutes per walk",
+    venue: "Shivalik Ground",
+    rules: [
+      "Teams can showcase any theme; only one round.",
+      "No external help allowed (choreography, design, makeup, etc.).",
+      "Teams must submit hard copy list of members prior to event.",
+      "Teams responsible for outfit, makeup, audio-visuals, and props.",
+      "Audio track and visuals must be submitted 1 week prior.",
+      "Penalty for exceeding time limit.",
+      "Use of water, animals, fire, firecrackers, or powders is prohibited.",
+      "Participants must report at least 30 minutes before scheduled time.",
+      "Judges’ decision is final and binding.",
+    ],
+    winningCriteria: ["Creativity, confidence, theme interpretation"],
+    resources: "Ramp, sound, lighting, green rooms",
+  },
+
+  {
+    id: 7,
+    title: "STYLING EVENT - HAUTE COUTURE",
+    shortTitle: "Haute Couture",
+    category: "Styling",
+    image: hauteCouture,
+    registrationLink:"https://forms.gle/5jpNpDpDcYvRNo3z5",
+    overview:
+      "HAUTE COUTURE is a styling event celebrating imagination, confidence, and visual storytelling where teams create looks inspired by assigned regions and twist cards.",
+    maxTeams: "15 Teams",
+    teamSize: "2 Members (Stylist & Model)",
+    venue: "MPC + 2 Green Rooms",
+    flow: [
+      "Opening & Briefing",
+      "Country/Region Allotment",
+      "Twist Card Draw",
+      "Creation Phase (Backstage)",
+      "Runway Reveal",
+      "Storytelling Round",
+      "Finale Walk",
+      "Judging & Results",
+    ],
+    rules: [
+      "Total duration 60 minutes including briefing and runway.",
+      "Country/region allotted one day prior.",
+      "Teams must incorporate the Twist Card.",
+      "Creation phase backstage within time limit; participants bring materials.",
+      "Model walk time 1–1.5 minutes; 30s storytelling by stylist.",
+      "Use of hazardous substances is prohibited.",
+      "Judges’ decision is final and binding.",
+    ],
+    winningCriteria: ["Country representation, creativity, twist adaptation, walk & expressions"],
+    resources: "Backstage, green rooms, ramp, lighting, judges",
+  },
+];
+
+export default culturalEvents;
