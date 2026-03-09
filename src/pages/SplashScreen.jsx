@@ -5,7 +5,6 @@ import splashBg from "../assets/splash-screen.jpeg";
 
 const SplashScreen = ({ onEnter }) => {
   return (
-    // Changed h-screen to h-[100dvh] for better mobile screen handling without overflow
     <div className="relative h-[100dvh] w-full overflow-hidden">
       
       {/* BACKGROUND */}
@@ -16,13 +15,13 @@ const SplashScreen = ({ onEnter }) => {
       />
 
       {/* CONTENT */}
-      <div className="absolute inset-0 flex flex-col items-center justify-center text-center -translate-x-6 px-4 leading-tight">
+      {/* Removed all unnecessary manual translations. Flexbox handles centering perfectly now. */}
+      <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-4 sm:px-8 leading-tight">
 
-        {/* Removed mt-10 so it doesn't push bottom content out */}
-        <div className="translate-x-4 md:translate-x-0">
-          
+        {/* TOP TEXT GROUP */}
+        <div className="flex flex-col gap-1 md:gap-2">
           <motion.p
-            className="text-2xl md:text-2xl font-extrabold text-[#4a2c1a]"
+            className="text-lg sm:text-xl md:text-2xl font-extrabold text-[#4a2c1a]"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
           >
@@ -30,7 +29,7 @@ const SplashScreen = ({ onEnter }) => {
           </motion.p>
 
           <motion.h2
-            className="text-2xl md:text-3xl font-extrabold text-[#4a2c1a] translate-x-2 md:translate-x-0"
+            className="text-lg sm:text-xl md:text-3xl font-extrabold text-[#4a2c1a]"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.3 }}
@@ -39,30 +38,31 @@ const SplashScreen = ({ onEnter }) => {
           </motion.h2>
 
           <motion.p
-            className="text-xl md:text-xl font-bold text-[#4a2c1a]"
+            className="text-base sm:text-lg md:text-xl font-bold text-[#4a2c1a]"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.6 }}
           >
             Presents
           </motion.p>
-
         </div>
 
         {/* LOGO */}
+        {/* Adjusted size slightly for mobile to prevent overflow, kept same for desktop */}
         <motion.img
           src={logo}
           alt="logo"
-          className="w-56 md:w-56 lg:w-64 my-1 mx-auto -translate-x-3 md:translate-x-0 relative z-10"
+          className="w-44 sm:w-48 md:w-56 lg:w-64 my-2 md:my-1 mx-auto relative z-10"
           initial={{ scale: 0.6, opacity: 0 }}
           animate={{ scale: 1, opacity: 1 }}
           transition={{ duration: 1 }}
         />
 
-        {/* EXPLORE BUTTON - Added negative margin (-mt-6 md:-mt-8) and z-20 to pull it up tightly under the logo */}
+        {/* EXPLORE BUTTON */}
+        {/* Adjusted negative margin: less overlapping on mobile (-mt-4), proper overlap on desktop (-mt-8) */}
         <motion.button
           onClick={onEnter}
-          className="px-6 py-2 border-2 border-[#4a2c1a] text-[#4a2c1a] font-bold rounded-full translate-x-4 md:translate-x-0 -mt-6 md:-mt-8 relative z-20"
+          className="px-6 py-2 border-2 border-[#4a2c1a] text-[#4a2c1a] font-bold rounded-full -mt-4 md:-mt-8 relative z-20"
           style={{
             fontFamily: "Georgia, serif",
             fontStyle: "italic",
@@ -78,35 +78,38 @@ const SplashScreen = ({ onEnter }) => {
           Explore
         </motion.button>
 
-        {/* SANSKRIT - Reduced mt-4 to mt-2 to save space */}
-        <motion.p
-          className="text-4xl font-extrabold text-[#4a2c1a] mt-2 translate-x-4 md:translate-x-0"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 1 }}
-        >
-          वसुधैव कुटुम्बकम्
-        </motion.p>
+        {/* BOTTOM TEXT GROUP */}
+        <div className="flex flex-col gap-1 mt-4 md:mt-2">
+          {/* SANSKRIT */}
+          <motion.p
+            className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-[#4a2c1a]"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 1 }}
+          >
+            वसुधैव कुटुम्बकम्
+          </motion.p>
 
-        {/* ENGLISH LINE */}
-        <motion.p
-          className="text-base font-bold text-[#4a2c1a] mt-1 translate-x-4 md:translate-x-0"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 1.2 }}
-        >
-          The World is One Family
-        </motion.p>
+          {/* ENGLISH LINE */}
+          <motion.p
+            className="text-sm md:text-base font-bold text-[#4a2c1a]"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 1.2 }}
+          >
+            The World is One Family
+          </motion.p>
 
-        {/* DATE */}
-        <motion.h2
-          className="text-2xl md:text-4xl font-extrabold mt-1 text-[#4a2c1a] translate-x-4 md:translate-x-0"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 1.4 }}
-        >
-          17<sup>th</sup> & 18<sup>th</sup> March 2026
-        </motion.h2>
+          {/* DATE */}
+          <motion.h2
+            className="text-xl sm:text-2xl md:text-4xl font-extrabold mt-1 text-[#4a2c1a]"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 1.4 }}
+          >
+            17<sup>th</sup> & 18<sup>th</sup> March 2026
+          </motion.h2>
+        </div>
 
       </div>
     </div>
