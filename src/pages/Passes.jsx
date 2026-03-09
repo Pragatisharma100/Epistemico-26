@@ -9,18 +9,6 @@ import platinumImg from "../assets/passes/platinum.jpg";
 
 const passes = [
   {
-    name: "Gold Pass",
-    price: "₹999",
-    image: goldImg,
-    titleColor: "text-yellow-600",
-    buttonColor: "bg-yellow-600 hover:bg-yellow-700",
-    features: [
-      "All Cultural Events Access",
-      "Priority Seating",
-      "Food Coupons"
-    ]
-  },
-  {
     name: "Silver Pass",
     price: "₹599",
     image: silverImg,
@@ -30,6 +18,18 @@ const passes = [
       "Entry to Selected Events",
       "General Seating",
       "Festival Kit"
+    ]
+  },
+   {
+    name: "Gold Pass",
+    price: "₹999",
+    image: goldImg,
+    titleColor: "text-yellow-600",
+    buttonColor: "bg-yellow-600 hover:bg-yellow-700",
+    features: [
+      "All Cultural Events Access",
+      "Priority Seating",
+      "Food Coupons"
     ]
   },
   {
@@ -118,5 +118,6 @@ const Passes = () => {
     </div>
   );
 };
+
 
 export default Passes;
