@@ -18,7 +18,7 @@ export default function Navbar() {
   return (
     <nav className="fixed top-6 left-1/2 -translate-x-1/2 z-50 w-[90%] max-w-5xl mb-12">
       {/* Main Navbar Container */}
-      <motion.div 
+      <motion.div
         initial={{ y: -20, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         className="glass-card flex items-center justify-between px-6 md:px-10 py-4 rounded-full border-2 border-brownMid/30 shadow-2xl backdrop-blur-xl bg-white/40"
@@ -43,14 +43,20 @@ export default function Navbar() {
                 key={link.name}
                 to={link.path}
                 className={`text-sm font-bold uppercase tracking-widest transition-all duration-300 relative group ${
-                  isActive ? "text-brownDark" : "text-brownMid hover:text-brownDark"
+                  isActive
+                    ? "text-brownDark"
+                    : "text-brownMid hover:text-brownDark"
                 }`}
               >
                 {link.name}
                 {/* Underline effect from Code 2 */}
-                <span className={`absolute -bottom-1 left-0 w-full h-[2px] bg-brownDark transition-transform duration-300 ${
-                  isActive ? "scale-x-100" : "scale-x-0 group-hover:scale-x-100"
-                }`} />
+                <span
+                  className={`absolute -bottom-1 left-0 w-full h-[2px] bg-brownDark transition-transform duration-300 ${
+                    isActive
+                      ? "scale-x-100"
+                      : "scale-x-0 group-hover:scale-x-100"
+                  }`}
+                />
               </Link>
             );
           })}
@@ -58,18 +64,23 @@ export default function Navbar() {
 
         {/* Action Button - Styles from Code 2 */}
         <div className="hidden md:block">
-          <motion.button 
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            className="bg-brownDark text-white px-6 py-2 rounded-full text-xs font-bold uppercase tracking-widest hover:bg-brownMid transition-colors shadow-md"
-          >
-            Book Passes
-          </motion.button>
+          <Link to="/passes">
+            <motion.button
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              className="bg-brownDark text-white px-6 py-2 rounded-full text-xs font-bold uppercase tracking-widest hover:bg-brownMid transition-colors shadow-md"
+            >
+              Book Passes
+            </motion.button>
+          </Link>
         </div>
 
         {/* MOBILE HAMBURGER - From Code 1 */}
         <div className="md:hidden flex items-center">
-          <button onClick={() => setMenuOpen(!menuOpen)} className="text-brownDark focus:outline-none">
+          <button
+            onClick={() => setMenuOpen(!menuOpen)}
+            className="text-brownDark focus:outline-none"
+          >
             {menuOpen ? <X size={28} /> : <Menu size={28} />}
           </button>
         </div>
@@ -91,15 +102,19 @@ export default function Navbar() {
                   to={link.path}
                   onClick={() => setMenuOpen(false)}
                   className={`text-sm font-bold uppercase tracking-[0.2em] font-sans ${
-                    location.pathname === link.path ? "text-brownDark" : "text-brownMid"
+                    location.pathname === link.path
+                      ? "text-brownDark"
+                      : "text-brownMid"
                   }`}
                 >
                   {link.name}
                 </Link>
               ))}
-              <button className="bg-brownDark text-white px-8 py-3 rounded-full text-xs font-bold uppercase tracking-widest shadow-md">
-                Book Passes
-              </button>
+              <Link to="/passes" onClick={() => setMenuOpen(false)}>
+                <button className="bg-brownDark text-white px-8 py-3 rounded-full text-xs font-bold uppercase tracking-widest shadow-md">
+                  Book Passes
+                </button>
+              </Link>
             </div>
           </motion.div>
         )}
