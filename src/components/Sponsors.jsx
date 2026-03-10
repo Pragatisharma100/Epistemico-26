@@ -1,5 +1,6 @@
 import React from 'react';
 import sponsor1 from '../assets/sponsor-1.png';
+import sponsor2 from '../assets/sponsor-2.png'; // Added Sponsor 2
 
 export default function Sponsors() {
   return (
@@ -11,11 +12,10 @@ export default function Sponsors() {
         </h2>
         
         <div className="glass-card rounded-3xl p-8 hover:scale-[1.01] transition-transform duration-300">
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 place-items-center">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-8 place-items-center">
             
-            {/* Sponsor 1 Box */}
+            {/* Sponsor 1: The Belgian Waffle Co */}
             <div className="flex flex-col items-center gap-3">
-              {/* Increased size of the inner box (w-40 h-32) */}
               <div className="w-40 h-32 bg-white/30 border border-white/40 rounded-2xl flex items-center justify-center p-4 shadow-sm">
                 <img 
                   src={sponsor1} 
@@ -23,21 +23,24 @@ export default function Sponsors() {
                   className="max-w-full max-h-full object-contain" 
                 />
               </div>
-              {/* Brand Name below the box */}
               <p className="text-sm font-bold text-brownDark text-center">
                 The Belgian Waffle Co
               </p>
             </div>
 
-            {/* Placeholder Boxes (Repeat the structure above for more sponsors) */}
-            {[2, 3, 4].map((i) => (
-              <div key={i} className="flex flex-col items-center gap-3 opacity-50">
-                <div className="w-40 h-32 bg-white/20 border border-dashed border-white/30 rounded-2xl grid place-items-center text-xs text-brownMid">
-                  Coming Soon
-                </div>
-                <p className="text-xs font-medium text-brownMid">Sponsor {i}</p>
+            {/* Sponsor 2: Saras */}
+            <div className="flex flex-col items-center gap-3">
+              <div className="w-40 h-32 bg-white/30 border border-white/40 rounded-2xl flex items-center justify-center p-4 shadow-sm">
+                <img 
+                  src={sponsor2} 
+                  alt="Saras" 
+                  className="max-w-full max-h-full object-contain" 
+                />
               </div>
-            ))}
+              <p className="text-sm font-bold text-brownDark text-center">
+                Saras
+              </p>
+            </div>
             
           </div>
         </div>
