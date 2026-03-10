@@ -1,6 +1,6 @@
 import React from 'react';
 import sponsor1 from '../assets/sponsor-1.png';
-import sponsor2 from '../assets/sponsor-2.png'; // Added Sponsor 2
+import sponsor2 from '../assets/sponsor-2.png'; 
 
 export default function Sponsors() {
   return (
@@ -12,7 +12,8 @@ export default function Sponsors() {
         </h2>
         
         <div className="glass-card rounded-3xl p-8 hover:scale-[1.01] transition-transform duration-300">
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-8 place-items-center">
+          {/* Added max-w-2xl and mx-auto here to bring the two items toward the center */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-12 place-items-center max-w-2xl mx-auto">
             
             {/* Sponsor 1: The Belgian Waffle Co */}
             <div className="flex flex-col items-center gap-3">
