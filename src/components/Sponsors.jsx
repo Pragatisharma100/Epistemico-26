@@ -5,26 +5,37 @@ export default function Sponsors() {
   return (
     <section className="px-4 md:px-8 py-12">
       <div className="max-w-6xl mx-auto">
-        <h2 className="text-2xl font-extrabold text-center text-brownDark font-samarkan mb-6">
-          Sponsors
+        {/* Simple Bold Title */}
+        <h2 className="text-3xl font-bold text-center text-brownDark mb-10 uppercase tracking-wide">
+          Our Sponsors
         </h2>
         
-        <div className="glass-card rounded-3xl p-6 hover:scale-[1.02] transition-transform duration-300">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 place-items-center">
+        <div className="glass-card rounded-3xl p-8 hover:scale-[1.01] transition-transform duration-300">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 place-items-center">
             
-            {/* Box 1: Your imported image */}
-            <div className="w-28 h-16 bg-white/20 border border-white/30 rounded-xl overflow-hidden grid place-items-center">
-              <img 
-                src={sponsor1} 
-                alt="Sponsor 1" 
-                className="max-w-full max-h-full object-contain p-2" 
-              />
+            {/* Sponsor 1 Box */}
+            <div className="flex flex-col items-center gap-3">
+              {/* Increased size of the inner box (w-40 h-32) */}
+              <div className="w-40 h-32 bg-white/30 border border-white/40 rounded-2xl flex items-center justify-center p-4 shadow-sm">
+                <img 
+                  src={sponsor1} 
+                  alt="The Belgian Waffle Co" 
+                  className="max-w-full max-h-full object-contain" 
+                />
+              </div>
+              {/* Brand Name below the box */}
+              <p className="text-sm font-bold text-brownDark text-center">
+                The Belgian Waffle Co
+              </p>
             </div>
 
-            {/* Boxes 2-4: Placeholders for now */}
+            {/* Placeholder Boxes (Repeat the structure above for more sponsors) */}
             {[2, 3, 4].map((i) => (
-              <div key={i} className="w-28 h-16 bg-white/20 border border-white/30 rounded-xl grid place-items-center text-xs text-brownMid">
-                Sponsor Logo
+              <div key={i} className="flex flex-col items-center gap-3 opacity-50">
+                <div className="w-40 h-32 bg-white/20 border border-dashed border-white/30 rounded-2xl grid place-items-center text-xs text-brownMid">
+                  Coming Soon
+                </div>
+                <p className="text-xs font-medium text-brownMid">Sponsor {i}</p>
               </div>
             ))}
             
