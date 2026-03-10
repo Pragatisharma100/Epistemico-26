@@ -102,7 +102,6 @@ const casCommittees = [
   {
     title: "LITERARY COMMITTEE",
     members: [
-      { name: "SAKSHI FAUZDAR", role: "HEAD", image: sakshiFauzdarImg },
       { name: "ANANYA MEWARA", role: "HEAD", image: ananyaMewaraImg },
       { name: "ISHEIKA PANWAR", role: "HEAD", image: isheikaPanwarImg },
       { name: "DEVANSHI PARASHAR", role: "SUB-HEAD", image: devanshiParasharImg },
