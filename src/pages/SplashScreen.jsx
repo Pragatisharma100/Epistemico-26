@@ -15,8 +15,11 @@ const SplashScreen = ({ onEnter }) => {
       />
 
       {/* CONTENT */}
-      {/* Removed all unnecessary manual translations. Flexbox handles centering perfectly now. */}
-      <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-4 sm:px-8 leading-tight">
+      {/* Changed justify-center to justify-between to allow spacers to push content */}
+      <div className="absolute inset-0 flex flex-col items-center justify-between text-center px-4 sm:px-8 leading-tight">
+
+        {/* TOP SPACER - Ensures symmetry */}
+        <div className="flex-1" />
 
         {/* TOP TEXT GROUP */}
         <div className="flex flex-col gap-1 md:gap-2">
@@ -47,40 +50,39 @@ const SplashScreen = ({ onEnter }) => {
           </motion.p>
         </div>
 
-        {/* LOGO */}
-        {/* Adjusted size slightly for mobile to prevent overflow, kept same for desktop */}
-        <motion.img
-          src={logo}
-          alt="logo"
-          className="w-44 sm:w-48 md:w-56 lg:w-64 my-2 md:my-1 mx-auto relative z-10"
-          initial={{ scale: 0.6, opacity: 0 }}
-          animate={{ scale: 1, opacity: 1 }}
-          transition={{ duration: 1 }}
-        />
+        {/* LOGO & BUTTON AREA */}
+        {/* We wrap these to treat them as a single middle unit */}
+        <div className="flex flex-col items-center">
+          <motion.img
+            src={logo}
+            alt="logo"
+            className="w-44 sm:w-48 md:w-56 lg:w-64 my-2 md:my-1 mx-auto relative z-10"
+            initial={{ scale: 0.6, opacity: 0 }}
+            animate={{ scale: 1, opacity: 1 }}
+            transition={{ duration: 1 }}
+          />
 
-        {/* EXPLORE BUTTON */}
-        {/* Adjusted negative margin: less overlapping on mobile (-mt-4), proper overlap on desktop (-mt-8) */}
-        <motion.button
-          onClick={onEnter}
-          className="px-6 py-2 border-2 border-[#4a2c1a] text-[#4a2c1a] font-bold rounded-full -mt-4 md:-mt-8 relative z-20"
-          style={{
-            fontFamily: "Georgia, serif",
-            fontStyle: "italic",
-            backgroundColor: "rgba(255,255,255,0.25)",
-            backdropFilter: "blur(3px)"
-          }}
-          initial={{ opacity: 0, y: 15 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 2 }}
-          whileHover={{ scale: 1.07, backgroundColor: "rgba(255,255,255,0.4)" }}
-          whileTap={{ scale: 0.95 }}
-        >
-          Explore
-        </motion.button>
+          <motion.button
+            onClick={onEnter}
+            className="px-6 py-2 border-2 border-[#4a2c1a] text-[#4a2c1a] font-bold rounded-full -mt-4 md:-mt-8 relative z-20"
+            style={{
+              fontFamily: "Georgia, serif",
+              fontStyle: "italic",
+              backgroundColor: "rgba(255,255,255,0.25)",
+              backdropFilter: "blur(3px)"
+            }}
+            initial={{ opacity: 0, y: 15 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 2 }}
+            whileHover={{ scale: 1.07, backgroundColor: "rgba(255,255,255,0.4)" }}
+            whileTap={{ scale: 0.95 }}
+          >
+            Explore
+          </motion.button>
+        </div>
 
         {/* BOTTOM TEXT GROUP */}
-        <div className="flex flex-col gap-1 mt-4 md:mt-2">
-          {/* SANSKRIT */}
+        <div className="flex flex-col gap-1">
           <motion.p
             className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-[#4a2c1a]"
             initial={{ opacity: 0 }}
@@ -90,7 +92,6 @@ const SplashScreen = ({ onEnter }) => {
             वसुधैव कुटुम्बकम्
           </motion.p>
 
-          {/* ENGLISH LINE */}
           <motion.p
             className="text-sm md:text-base font-bold text-[#4a2c1a]"
             initial={{ opacity: 0 }}
@@ -100,7 +101,6 @@ const SplashScreen = ({ onEnter }) => {
             The World is One Family
           </motion.p>
 
-          {/* DATE */}
           <motion.h2
             className="text-xl sm:text-2xl md:text-4xl font-extrabold mt-1 text-[#4a2c1a]"
             initial={{ opacity: 0 }}
@@ -110,6 +110,9 @@ const SplashScreen = ({ onEnter }) => {
             17<sup>th</sup> & 18<sup>th</sup> March 2026
           </motion.h2>
         </div>
+
+        {/* BOTTOM SPACER - Ensures symmetry */}
+        <div className="flex-1" />
 
       </div>
     </div>
