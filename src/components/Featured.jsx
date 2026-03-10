@@ -19,14 +19,22 @@ const slides = [
 
 export default function Featured() {
   const [current, setCurrent] = useState(0);
-  const [isMuted, setIsMuted] = useState(true); // Default to muted for autoplay
+  const [isMuted, setIsMuted] = useState(true);
   const intervalRef = useRef(null);
 
+  // Function to move to next slide
+  const nextSlide = () => {
+    setCurrent((prev) => (prev + 1) % slides.length);
+  };
+
   const startAuto = () => {
-    if (intervalRef.current) return;
-    intervalRef.current = setInterval(() => {
-      setCurrent((prev) => (prev + 1) % slides.length);
-    }, 4000);
+    stopAuto(); // Clear any existing intervals first
+    
+    // Only start a timer if the current slide is an IMAGE
+    // For videos, we rely on the onEnded event
+    if (slides[current].type === "image") {
+      intervalRef.current = setInterval(nextSlide, 4000);
+    }
   };
 
   const stopAuto = () => {
@@ -36,10 +44,11 @@ export default function Featured() {
     }
   };
 
+  // Restart logic whenever 'current' changes
   useEffect(() => {
     startAuto();
     return () => stopAuto();
-  }, []);
+  }, [current]);
 
   return (
     <section className="px-4 md:px-8 py-12 pt-40">
@@ -68,7 +77,6 @@ export default function Featured() {
               transition={{ duration: 0.6 }}
               className="w-full"
             >
-              {/* Responsive Sizing Container */}
               <div className="relative rounded-2xl overflow-hidden border-2 border-white/20 shadow-2xl bg-black/20 
                               aspect-[4/5] sm:aspect-video md:aspect-[21/9]">
                 
@@ -79,11 +87,11 @@ export default function Featured() {
                       className="w-full h-full object-cover" 
                       autoPlay 
                       muted={isMuted}
-                      loop 
+                      loop={false} // Set to false so onEnded can trigger
                       playsInline 
+                      onEnded={nextSlide} // Waits for video to finish before switching
                     />
                     
-                    {/* Audio Toggle Button */}
                     <button 
                       onClick={(e) => {
                         e.stopPropagation();
@@ -121,7 +129,6 @@ export default function Featured() {
             </motion.div>
           </AnimatePresence>
 
-          {/* Navigation Dots & Buttons */}
           <div className="flex justify-center items-center gap-6 mt-8">
             <button
               onClick={() => setCurrent((prev) => (prev - 1 + slides.length) % slides.length)}
@@ -145,7 +152,7 @@ export default function Featured() {
             </div>
 
             <button
-              onClick={() => setCurrent((prev) => (prev + 1) % slides.length)}
+              onClick={nextSlide}
               className="p-3 rounded-full bg-[#7a4a2c] text-white hover:bg-[#a9572f] shadow-md transition-all active:scale-90"
             >
               <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
