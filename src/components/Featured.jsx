@@ -19,6 +19,7 @@ const slides = [
 
 export default function Featured() {
   const [current, setCurrent] = useState(0);
+  const [isMuted, setIsMuted] = useState(true); // State for audio
   const intervalRef = useRef(null);
 
   const startAuto = () => {
@@ -39,15 +40,6 @@ export default function Featured() {
     startAuto();
     return () => stopAuto();
   }, []);
-  const container = {
-    hidden: {},
-    show: { transition: { staggerChildren: 0.12 } }
-  };
-
-  const card = {
-    hidden: { opacity: 0, y: 30, scale: 0.98 },
-    show: { opacity: 1, y: 0, scale: 1, transition: { duration: 0.7, ease: "easeOut" } }
-  };
 
   return (
     <section className="px-4 md:px-8 py-12 pt-40">
@@ -78,7 +70,30 @@ export default function Featured() {
             >
               <div className="relative rounded-xl overflow-hidden border-2 border-white/10 shadow-lg bg-white/5 h-80 md:h-96">
                 {slides[current].type === "video" ? (
-                  <video src={slides[current].src} className="w-full h-full object-cover" autoPlay muted loop playsInline />
+                  <>
+                    <video 
+                      src={slides[current].src} 
+                      className="w-full h-full object-cover" 
+                      autoPlay 
+                      muted={isMuted} // Controlled by state
+                      loop 
+                      playsInline 
+                    />
+                    {/* Mute/Unmute Button */}
+                    <button 
+                      onClick={(e) => {
+                        e.stopPropagation(); // Prevents triggering other clicks
+                        setIsMuted(!isMuted);
+                      }}
+                      className="absolute top-4 right-4 z-20 p-2 bg-black/40 hover:bg-black/60 text-white rounded-full backdrop-blur-sm transition-all"
+                    >
+                      {isMuted ? (
+                        <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><line x1="1" y1="1" x2="23" y2="23"></line><path d="M9 9l-5 5H2v-8h2L9 5V9z"></path><path d="M17.07 16.24a5 5 0 0 0 0-8.48"></path></svg>
+                      ) : (
+                        <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon><path d="M19.07 4.93a10 10 0 0 1 0 14.14"></path><path d="M15.54 8.46a5 5 0 0 1 0 7.07"></path></svg>
+                      )}
+                    </button>
+                  </>
                 ) : (
                   <img src={slides[current].src} alt={`featured-${current}`} className="w-full h-full object-cover" />
                 )}
