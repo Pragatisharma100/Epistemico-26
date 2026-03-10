@@ -8,7 +8,6 @@ import anushkaNepalpuriImg from "../assets/team/CAS Heads/anushka-nepalpuri.jpg"
 import isheikaPanwarImg from "../assets/team/CAS Heads/isheika-panwar.jpg";
 import namrataSinghImg from "../assets/team/CAS Heads/namrata-singh.jpg";
 import preetiRawatImg from "../assets/team/CAS Heads/preeti-rawat.jpg";
-import sakshiFauzdarImg from "../assets/team/CAS Heads/sakshi-fauzdar.jpg";
 import sonakshiReniyaImg from "../assets/team/CAS Heads/sonakshi-reniya.jpg";
 import soniKumariImg from "../assets/team/CAS Heads/soni kumari.jpg";
 import dishaChhipaImg from "../assets/team/CAS Heads/disha-chhipa.jpg";
