@@ -19,7 +19,7 @@ const slides = [
 
 export default function Featured() {
   const [current, setCurrent] = useState(0);
-  const [isMuted, setIsMuted] = useState(true); // Audio control state
+  const [isMuted, setIsMuted] = useState(true); // Default to muted for autoplay
   const intervalRef = useRef(null);
 
   const startAuto = () => {
@@ -68,6 +68,7 @@ export default function Featured() {
               transition={{ duration: 0.6 }}
               className="w-full"
             >
+              {/* Responsive Sizing Container */}
               <div className="relative rounded-2xl overflow-hidden border-2 border-white/20 shadow-2xl bg-black/20 
                               aspect-[4/5] sm:aspect-video md:aspect-[21/9]">
                 
@@ -77,27 +78,25 @@ export default function Featured() {
                       src={slides[current].src} 
                       className="w-full h-full object-cover" 
                       autoPlay 
-                      muted={isMuted} // Mute controlled by state
+                      muted={isMuted}
                       loop 
                       playsInline 
                     />
                     
-                    {/* Mute/Unmute Toggle Button */}
+                    {/* Audio Toggle Button */}
                     <button 
                       onClick={(e) => {
-                        e.stopPropagation(); // Prevents slide clicks
+                        e.stopPropagation();
                         setIsMuted(!isMuted);
                       }}
                       className="absolute top-4 right-4 z-20 p-2 bg-black/40 hover:bg-black/60 text-white rounded-full backdrop-blur-sm transition-all shadow-lg"
                     >
                       {isMuted ? (
-                        /* Mute Icon */
                         <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z" />
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2" />
                         </svg>
                       ) : (
-                        /* Volume Up Icon */
                         <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15.536 8.464a5 5 0 010 7.072m2.828-9.9a9 9 0 010 12.728M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z" />
                         </svg>
@@ -113,7 +112,6 @@ export default function Featured() {
                 )}
                 
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
-                
                 <div className="absolute left-6 bottom-6 z-10">
                   <span className="px-4 py-1.5 text-white bg-[#7a4a2c] backdrop-blur-md rounded-xl text-sm font-bold shadow-lg">
                     Highlight
@@ -123,6 +121,7 @@ export default function Featured() {
             </motion.div>
           </AnimatePresence>
 
+          {/* Navigation Dots & Buttons */}
           <div className="flex justify-center items-center gap-6 mt-8">
             <button
               onClick={() => setCurrent((prev) => (prev - 1 + slides.length) % slides.length)}
