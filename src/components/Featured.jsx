@@ -89,6 +89,7 @@ export default function Featured() {
                       muted={isMuted}
                       loop={false} // Set to false so onEnded can trigger
                       playsInline 
+                      preload="auto"
                       onEnded={nextSlide} // Waits for video to finish before switching
                     />
                     
