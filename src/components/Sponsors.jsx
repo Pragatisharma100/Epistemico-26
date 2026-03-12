@@ -1,7 +1,7 @@
 import React from 'react';
 import sponsor1 from '../assets/sponsor-1.png';
 import sponsor2 from '../assets/sponsor-2.png';
-import sponsor3 from '../assets/sponsor-3.png';
+import sponsor3 from '../assets/sponsor-3.jpg';
 import sponsor4 from '../assets/sponsor-4.png';
 import sponsor5 from '../assets/sponsor-5.png';
 
