@@ -29,7 +29,7 @@ export default function Sponsors() {
               <div className="w-24 h-20 md:w-32 md:h-28 bg-white/30 border border-white/40 rounded-2xl flex items-center justify-center p-2 shadow-sm">
                 <img src={sponsor2} alt="Saras" className="max-w-full max-h-full object-contain" />
               </div>
-              <p className="text-[9px] md:text-[11px] font-bold text-brownDark text-center leading-tight">Saras</p>
+              <p className="text-xs md:text-sm font-bold text-brownDark text-center leading-tight">Saras</p>
             </div>
 
             {/* Sponsor 3 */}
@@ -37,7 +37,7 @@ export default function Sponsors() {
               <div className="w-24 h-20 md:w-32 md:h-28 bg-white/30 border border-white/40 rounded-2xl flex items-center justify-center p-2 shadow-sm">
                 <img src={sponsor3} alt="Pinak" className="max-w-full max-h-full object-contain" />
               </div>
-              <p className="text-[9px] md:text-[11px] font-bold text-brownDark text-center leading-tight">Pinak</p>
+              <p className="text-xs md:text-sm font-bold text-brownDark text-center leading-tight">Pinak</p>
             </div>
 
             {/* Sponsor 4 */}
@@ -45,7 +45,7 @@ export default function Sponsors() {
               <div className="w-24 h-20 md:w-32 md:h-28 bg-white/30 border border-white/40 rounded-2xl flex items-center justify-center p-2 shadow-sm">
                 <img src={sponsor4} alt="Trends" className="max-w-full max-h-full object-contain" />
               </div>
-              <p className="text-[9px] md:text-[11px] font-bold text-brownDark text-center leading-tight">Trends</p>
+              <p className="text-xs md:text-sm font-bold text-brownDark text-center leading-tight">Trends</p>
             </div>
 
             {/* Sponsor 5 */}
@@ -53,7 +53,7 @@ export default function Sponsors() {
               <div className="w-24 h-20 md:w-32 md:h-28 bg-white/30 border border-white/40 rounded-2xl flex items-center justify-center p-2 shadow-sm">
                 <img src={sponsor5} alt="Domino's" className="max-w-full max-h-full object-contain" />
               </div>
-              <p className="text-[9px] md:text-[11px] font-bold text-brownDark text-center leading-tight">Domino's</p>
+              <p className="text-xs md:text-sm font-bold text-brownDark text-center leading-tight">Domino's</p>
             </div>
 
           </div>
