@@ -15,7 +15,7 @@ export default function Sponsors() {
         
         <div className="glass-card rounded-3xl p-4 md:p-8 hover:scale-[1.01] transition-transform duration-300">
           {/* Changed gap to gap-1 and ensured lg:grid-cols-5 is active */}
-          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-1 place-items-center w-full">
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-0 place-items-center w-full">
             
             {/* Sponsor 1 */}
             <div className="flex flex-col items-center gap-2 w-full">
