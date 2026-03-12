@@ -14,47 +14,47 @@ export default function Sponsors() {
         </h2>
         
         <div className="glass-card rounded-3xl p-8 hover:scale-[1.01] transition-transform duration-300">
-          {/* grid-cols-5 on desktop (lg) forces them into one line */}
-          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-6 place-items-center w-full mx-auto">
+          {/* Changed lg:grid-cols-3 to lg:grid-cols-5 and used w-full */}
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 place-items-center w-full mx-auto">
             
             {/* Sponsor 1 */}
-            <div className="flex flex-col items-center gap-3 w-full">
-              <div className="w-32 h-28 bg-white/30 border border-white/40 rounded-2xl flex items-center justify-center p-3 shadow-sm">
+            <div className="flex flex-col items-center gap-3">
+              <div className="w-32 h-28 bg-white/30 border border-white/40 rounded-2xl flex items-center justify-center p-4 shadow-sm">
                 <img src={sponsor1} alt="The Belgian Waffle Co" className="max-w-full max-h-full object-contain" />
               </div>
-              <p className="text-[11px] md:text-xs font-bold text-brownDark text-center">The Belgian Waffle Co</p>
+              <p className="text-xs font-bold text-brownDark text-center">The Belgian Waffle Co</p>
             </div>
 
             {/* Sponsor 2 */}
-            <div className="flex flex-col items-center gap-3 w-full">
-              <div className="w-32 h-28 bg-white/30 border border-white/40 rounded-2xl flex items-center justify-center p-3 shadow-sm">
+            <div className="flex flex-col items-center gap-3">
+              <div className="w-32 h-28 bg-white/30 border border-white/40 rounded-2xl flex items-center justify-center p-4 shadow-sm">
                 <img src={sponsor2} alt="Saras" className="max-w-full max-h-full object-contain" />
               </div>
-              <p className="text-[11px] md:text-xs font-bold text-brownDark text-center">Saras</p>
+              <p className="text-xs font-bold text-brownDark text-center">Saras</p>
             </div>
 
             {/* Sponsor 3 */}
-            <div className="flex flex-col items-center gap-3 w-full">
-              <div className="w-32 h-28 bg-white/30 border border-white/40 rounded-2xl flex items-center justify-center p-3 shadow-sm">
+            <div className="flex flex-col items-center gap-3">
+              <div className="w-32 h-28 bg-white/30 border border-white/40 rounded-2xl flex items-center justify-center p-4 shadow-sm">
                 <img src={sponsor3} alt="Pinak" className="max-w-full max-h-full object-contain" />
               </div>
-              <p className="text-[11px] md:text-xs font-bold text-brownDark text-center">Pinak</p>
+              <p className="text-xs font-bold text-brownDark text-center">Pinak</p>
             </div>
 
             {/* Sponsor 4 */}
-            <div className="flex flex-col items-center gap-3 w-full">
-              <div className="w-32 h-28 bg-white/30 border border-white/40 rounded-2xl flex items-center justify-center p-3 shadow-sm">
+            <div className="flex flex-col items-center gap-3">
+              <div className="w-32 h-28 bg-white/30 border border-white/40 rounded-2xl flex items-center justify-center p-4 shadow-sm">
                 <img src={sponsor4} alt="Trends" className="max-w-full max-h-full object-contain" />
               </div>
-              <p className="text-[11px] md:text-xs font-bold text-brownDark text-center">Trends</p>
+              <p className="text-xs font-bold text-brownDark text-center">Trends</p>
             </div>
 
             {/* Sponsor 5 */}
-            <div className="flex flex-col items-center gap-3 w-full">
-              <div className="w-32 h-28 bg-white/30 border border-white/40 rounded-2xl flex items-center justify-center p-3 shadow-sm">
+            <div className="flex flex-col items-center gap-3">
+              <div className="w-32 h-28 bg-white/30 border border-white/40 rounded-2xl flex items-center justify-center p-4 shadow-sm">
                 <img src={sponsor5} alt="Domino's" className="max-w-full max-h-full object-contain" />
               </div>
-              <p className="text-[11px] md:text-xs font-bold text-brownDark text-center">Domino's</p>
+              <p className="text-xs font-bold text-brownDark text-center">Domino's</p>
             </div>
 
           </div>
