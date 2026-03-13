@@ -3,7 +3,7 @@ import sponsor1 from '../assets/sponsor-1.png';
 import sponsor2 from '../assets/sponsor-2.png';
 import sponsor3 from '../assets/sponsor-3.jpg';
 import sponsor4 from '../assets/sponsor-4.png';
-{/*import sponsor5 from '../assets/sponsor-5.png';*/}
+import sponsor5 from '../assets/sponsor-5.png';
 
 export default function Sponsors() {
   return (
@@ -48,14 +48,13 @@ export default function Sponsors() {
               <p className="text-xs md:text-sm font-bold text-brownDark text-center leading-tight">Trends</p>
             </div>
 
-            {/* Sponsor 5 
+            {/* Sponsor 5 */} 
             <div className="flex flex-col items-center gap-2 w-full">
               <div className="w-24 h-20 md:w-32 md:h-28 bg-white/30 border border-white/40 rounded-2xl flex items-center justify-center p-2 shadow-sm">
                 <img src={sponsor5} alt="Domino's" className="max-w-full max-h-full object-contain" />
               </div>
-              <p className="text-xs md:text-sm font-bold text-brownDark text-center leading-tight">Domino's</p>
-            </div>
-               */}
+              <p className="text-xs md:text-sm font-bold text-brownDark text-center leading-tight">Sigdi Dosa</p>
+            </div>            
           </div>
         </div>
       </div>
