@@ -29,19 +29,8 @@ export default function RegistrationModal({ open, onClose, selectedEvent, google
           <div className="space-y-4">
             <h3 className="text-xl font-bold text-brownDark mb-4">Fill the Registration Form Below</h3>
 
-            <div className="bg-gray-50 border-2 border-dashed border-gray-300 rounded-lg p-8 text-center">
-              <BookOpen className="w-12 h-12 text-gray-300 mx-auto mb-3" />
-              <p className="text-gray-500 font-semibold mb-2">Google Form Registration</p>
-              <p className="text-xs text-gray-400 mb-4">(Admin: Update the Google Form link below)</p>
-
-              <div className="mt-6 p-4 bg-white rounded border border-gray-300">
-                <p className="text-sm text-brownDark"><strong>TODO for Admin:</strong> Add your Google Form embed link in the data file or component</p>
-                <p className="text-xs text-brownMid mt-2">Replace the placeholder with your Google Form iframe code or use the direct link below.</p>
-              </div>
-            </div>
-
             <div className="bg-blue-50 border-l-4 border-blue-400 p-4 rounded">
-              <p className="text-sm text-gray-700 mb-3"><strong>Alternatively, open the form directly:</strong></p>
+              <p className="text-sm text-gray-700 mb-3"><strong>Open the registration form directly:</strong></p>
               <a href={googleFormLink} target="_blank" rel="noopener noreferrer" className="inline-block px-6 py-2 bg-blue-500 text-white rounded-full font-semibold hover:bg-blue-600 transition-colors">📝 Open Registration Form →</a>
             </div>
           </div>
