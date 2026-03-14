@@ -9,6 +9,7 @@ const innovationEvents = [
     shortTitle: "UI/UX Design",
     category: "Design Competition",
      image: uiux,
+     registrationLink:"https://forms.gle/GECRHhph6vkiv8Fe8",
     overview:
       "This UI/UX Design event is a creativity and problem-solving based competition where participants design a simple and user-friendly interface to solve a real-world problem. Coding is not required.",
     problemStatement:
@@ -80,6 +81,7 @@ const innovationEvents = [
     shortTitle: "EkWorld Art",
     category: "Canvas Painting Event",
     image: ekWorldArtImg,
+    registrationLink:"https://forms.gle/Q2Uk5nuTJ83xQQHE8",
     overview:
       "EkWorld Art is a creative canvas painting competition where participants express ideas, emotions, and themes through art. The event focuses on originality, creativity, and artistic presentation.",
     problemStatement:
@@ -144,6 +146,7 @@ const innovationEvents = [
     shortTitle: "Shark Tank",
     category: "Innovation & Pitching Event",
     image: sharkTankImg,
+    registrationLink:"https://forms.gle/G9jka3gMeadjiAKb9",
     overview:
       "The objective of Shark Tank GWECA Edition is to encourage students to present business or startup ideas with innovative solutions. The event aims to foster entrepreneurial thinking, creativity, problem-solving skills, and awareness of societal applications through idea pitching in a competitive and engaging environment.",
     problemStatement:
@@ -208,6 +211,7 @@ const innovationEvents = [
     shortTitle: "Human Ludo",
     category: "Strategic Team Competition",
     image: humanLudoImg,
+    registrationLink:"https://forms.gle/HVmRdJrWS2tj8UtV6",
     overview:
       "Human Ludo is a large-scale version of the traditional Ludo game played by participants themselves as tokens on a giant board. Teams compete against each other by moving strategically based on dice rolls and game rules.",
     eventDetails: {

@@ -14,7 +14,6 @@ import ananyaMewaraImg from "../assets/team/CAS Heads/ananya-mewara.jpg";
 import aayushiTakImg from "../assets/team/CAS Heads/aayushi-tak.jpg";
 import namrataSinghImg from "../assets/team/CAS Heads/namrata-singh.jpg";
 import dishaChhipaImg from "../assets/team/CAS Heads/disha-chhipa.jpg";
-import sakshiFauzdarImg from "../assets/team/CAS Heads/sakshi-fauzdar.jpg";
 import sonakshiReniyaImg from "../assets/team/CAS Heads/sonakshi-reniya.jpg";
 
 const leadership = [
@@ -42,7 +41,6 @@ const contactSections = [
     members: [
       { name: "ISHEIKA PANWAR", phone: "9680599608", image: isheikaPanwarImg },
       { name: "ANANYA MEWARA", phone: "8118815761", image: ananyaMewaraImg },
-      { name: "SAKSHI FAUZDAR", phone: "9024591556", image: sakshiFauzdarImg }
     ]
   },
   {

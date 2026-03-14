@@ -8,7 +8,6 @@ import anushkaNepalpuriImg from "../assets/team/CAS Heads/anushka-nepalpuri.jpg"
 import isheikaPanwarImg from "../assets/team/CAS Heads/isheika-panwar.jpg";
 import namrataSinghImg from "../assets/team/CAS Heads/namrata-singh.jpg";
 import preetiRawatImg from "../assets/team/CAS Heads/preeti-rawat.jpg";
-import sakshiFauzdarImg from "../assets/team/CAS Heads/sakshi-fauzdar.jpg";
 import sonakshiReniyaImg from "../assets/team/CAS Heads/sonakshi-reniya.jpg";
 import soniKumariImg from "../assets/team/CAS Heads/soni kumari.jpg";
 import dishaChhipaImg from "../assets/team/CAS Heads/disha-chhipa.jpg";
@@ -27,7 +26,7 @@ import harshitaGuptaImg from "../assets/team/CAS Subheads/harshita-gupta.jpg";
 import tanishkaSahuImg from "../assets/team/Technical Team/tanishka-sahu.jpg";
 import tishaLalchandaniImg from "../assets/team/Technical Team/tisha-lalchandani.jpg";
 import shwetaJacobImg from "../assets/team/Technical Team/shweta-jacob.jpg";
-import priyanshiAgarwalImg from "../assets/team/Technical Team/priyanshi-agarwal.jpg";
+import priyanshiAgarwalImg from "../assets/team/Technical Team/priyanshi-agarwal.jpeg";
 import yashikaMenghaniImg from "../assets/team/Technical Team/yashika-menghani.jpg";
 import bhawanaSharmaImg from "../assets/team/Technical Team/bhawana-sharma.jpg";
 import anushkaSharmaImg from "../assets/team/Technical Team/anushka-sharma.jpg";
@@ -44,7 +43,7 @@ import richaShrivastavaImg from "../assets/team/PR Team/richa-shrivastava.png";
 import khushiKhatriImg from "../assets/team/Creative Team/khushi-khatri.jpg";
 import nandiniRathoreImg from "../assets/team/Creative Team/nandini-kunwar-rathore.jpg";
 import palakMarothiyaImg from "../assets/team/Creative Team/palak-marothiya.jpg";
-import ridhimaImg from "../assets/team/Creative Team/ridhima-chakraborty.jpg";
+import taniyaImg from "../assets/team/Creative Team/taniya.jpeg";
 import bhavytaImg from "../assets/team/Creative Team/bhavyta-ramawat.jpg";
 
 // Asset Imports - Cultural Team
@@ -103,7 +102,6 @@ const casCommittees = [
   {
     title: "LITERARY COMMITTEE",
     members: [
-      { name: "SAKSHI FAUZDAR", role: "HEAD", image: sakshiFauzdarImg },
       { name: "ANANYA MEWARA", role: "HEAD", image: ananyaMewaraImg },
       { name: "ISHEIKA PANWAR", role: "HEAD", image: isheikaPanwarImg },
       { name: "DEVANSHI PARASHAR", role: "SUB-HEAD", image: devanshiParasharImg },
@@ -136,7 +134,7 @@ const pairedExecutives = [
         { name: "KHUSHI KHATRI", role: "4TH YEAR", image: khushiKhatriImg },
         { name: "NANDINI RATHORE", role: "4TH YEAR", image: nandiniRathoreImg },
         { name: "PALAK MAROTHIYA", role: "3RD YEAR", image: palakMarothiyaImg },
-        { name: "RIDHIMA CHAKRABORTY", role: "3RD YEAR", image: ridhimaImg },
+        { name: "TANIYA CHOUDHARY", role: "3RD YEAR", image: taniyaImg },
         { name: "BHAVYTA RAMAWAT", role: "3RD YEAR", image: bhavytaImg }
       ]
     },
