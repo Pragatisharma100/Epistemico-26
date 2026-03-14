@@ -41,25 +41,12 @@ export default function Technical() {
 
         {/* Banner */}
         <div className="bg-gradient-to-r from-[#a9572f] to-[#8b4524] rounded-xl p-6 mb-8 text-white shadow-lg">
-          <div className="flex flex-col md:flex-row justify-between items-center gap-4">
+          <div className="text-center">
 
-            <div>
-              <h2 className="text-2xl font-bold">Are you ready to compete?</h2>
-              <p className="opacity-90">
-                Select a technical event and register now.
-              </p>
-            </div>
-
-            <button
-              onClick={() => {
-                setSelectedEvent("Technical Events");
-                setGoogleFormLink("https://forms.gle/YOUR_MAIN_FORM");
-                setShowRegistration(true);
-              }}
-              className="mt-2 md:mt-0 bg-white text-[#a9572f] px-6 py-2 rounded-full font-bold hover:bg-orange-50 transition-all"
-            >
-              Register Here →
-            </button>
+            <h2 className="text-2xl font-bold">Are you ready to compete?</h2>
+            <p className="opacity-90 mt-2">
+              Select a technical event and register now.
+            </p>
 
           </div>
         </div>

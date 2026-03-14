@@ -53,7 +53,7 @@ export default function Events() {
       <main className="max-w-7xl mx-auto px-4 pt-44 pb-12">
         {/* UPDATED: Changed from font-samarkan to match Navbar link style */}
         <h1 className="text-4xl font-extrabold text-center text-brownDark font-samarkan mb-12 drop-shadow-md">
-  Fest Events
+  Epistemico Events
 </h1>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 items-stretch">
           {eventsData.map((event, index) => (

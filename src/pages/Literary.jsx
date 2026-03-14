@@ -42,21 +42,12 @@ export default function Literary() {
 
         {/* Banner */}
         <div className="bg-gradient-to-r from-[#a9572f] to-[#8b4524] rounded-xl p-6 mb-8 text-white shadow-lg">
-          <div className="flex flex-col md:flex-row justify-between items-center gap-4">
+          <div className="text-center">
 
-            <div>
-              <h2 className="text-2xl font-bold">Words, Wit & Expression</h2>
-              <p className="opacity-90">
-                Choose a literary event and join the challenge.
-              </p>
-            </div>
-
-            <button
-              onClick={() => setShowRegistration(true)}
-              className="mt-2 md:mt-0 bg-white text-[#a9572f] px-6 py-2 rounded-full font-bold hover:bg-orange-50 transition-all"
-            >
-              Register Here →
-            </button>
+            <h2 className="text-2xl font-bold">Words, Wit & Expression</h2>
+            <p className="opacity-90 mt-2">
+              Choose a literary event and join the challenge.
+            </p>
 
           </div>
         </div>
