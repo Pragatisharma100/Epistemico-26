@@ -27,8 +27,8 @@ const technicalEvents = [
     ],
     timeBreakdown: [
       { range: "0–15 min", activity: "Strategy Phase" },
-      { range: "15–105 min", activity: "Relay Coding Phase" },
-      { range: "105–90 min", activity: "Buffer & Submission" },
+      { range: "15–75 min", activity: "Relay Coding Phase" },
+      { range: "75–90 min", activity: "Buffer & Submission" },
     ],
     lifelines: [
       "AI assistance (2 prompts max)",
@@ -104,7 +104,7 @@ const technicalEvents = [
     eventDetails: {
       format: "Knockout Rounds",
       duration: "2 Hours",
-      venue: "Computer Labs",
+      venue: "Ravindra nath Tagore Auditorium",
       totalParticipants: "15-20",
     },
     rules: [
